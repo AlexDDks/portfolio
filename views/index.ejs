@@ -4,73 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/index.css">
+    <script src="https://kit.fontawesome.com/fa36d49c1a.js" crossorigin="anonymous"></script>
+    <script src="/js/scrollListener.js"></script>
     <title>A. Garcia</title>
 </head>
 <body>
+
+    <section class="mainSection">
     <header>
         <nav>
             <ul>
-                <a href="/about"><li>About</li></a>
-                <a href="/work"><li>Work</li></a>
-                <a href="/contact"><li>Contact</li></a>
+                <a href="/#article1"><li>About</li></a>
+                <a href="/#article2"><li>Work</li></a>
+                <a href="/#article3"><li>Contact</li></a>
+                <a href="/"><li>Past</li></a>
             </ul>
         </nav>
     </header>
 
-    <section class="sectionTop">
-        <article class="pLeft">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas accusamus beatae error hic quaerat quo ipsam veritatis nobis? Earum tempora veniam dicta quam quod sit ex nisi dolor consequatur. Deserunt et magnam dignissimos eos fugiat animi maiores. Vero iure adipisci quibusdam debitis sit. Ullam totam deleniti earum autem assumenda!</p>
-        </article>
+    <article class="contentArticle" id="article1">
 
-        <article class="logoRight">
-            logo
-        </article>
+        <div class="contentDiv">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi vitae sint facilis adipisci voluptatem asperiores, laudantium, sit magni qui suscipit recusandae quos esse doloribus a error aliquam vel itaque porro ipsa quae odit nihil dolorem quasi? Aliquam, eos? Commodi voluptatem alias deleniti omnis incidunt</p>
+            <div class="cara">
+                <img src="/img/cara.png" alt="">
+            </div>
+        </div>
+       
+    
+    </article>
+
     </section>
 
-    <section class="sectionBottom">
-        <article class="logoLeft">
-            Logo
-        </article>
+    <div class="logo">
+        <img src="/img/logo.png" alt="logo">
+    </div>
 
-        <article class="pRight">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas accusamus beatae error hic quaerat quo ipsam veritatis nobis? Earum tempora veniam dicta quam quod sit ex nisi dolor consequatur. Deserunt et magnam dignissimos eos fugiat animi maiores. Vero iure adipisci quibusdam debitis sit. Ullam totam deleniti earum autem assumenda!</p>
-        </article>
-    </section>
+    <section class="containerScroll">
+    <article class="contentArticle bottom" id="article2">
+        <div class="contentDiv">
+            <h1>Work</h1>
+            <a href="/#"><div class="contentWork">
+                <img src="/img/website.jpeg" alt="">
 
-    <section class="sectionComments">
-        <article class=>
-            <h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, excepturi!
-                </p>
-            </h2>
-        </article>
-
-        <article>
-            <h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, excepturi!
-                </p>
-            </h2>
-        </article>
-
-        <article>
-            <h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, excepturi!
-                </p>
-            </h2>
-        </article>
-    </section>
-
-    <footer>
-        <div>
-            Icono
+                <div class="contentMouseOver">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>React.js</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div></a> 
         </div>
 
-        <div>
-            Icono
+    </article>
+
+    <article class="contentArticle bottom" id="article2">
+        <div class="contentDiv">
+            <h1>Work</h1>
+            <a href="/#"><div class="contentWork">
+                <img src="/img/website.jpeg" alt="">
+
+                <div class="contentMouseOver">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>React.js</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div></a> 
         </div>
-    </footer>
+    </article>
+    </section> 
+
+
+
+
+
+    <article class="contentArticle bottomInfo" id="article3">
+        <div class="contact">
+            <div class="divInfo">
+                <p>M.Sc. Manuel Alejandro Garcia Andrade</p>
+            </div>
+    
+            <div class="divInfo">
+                <a href="mailto:magarciaa92@gmail.com?subject=Contact&body=Hi%20Alex%2C%20I%20have%20seen%20your%20portfolio%2C%20and%20I'm%20interested%20in%20contacting%20you" target="_blank"><p>magarciaa92@gmail.com</p></a>
+            </div> 
+            
+            <div class="divInfo">
+               <a href="https://wa.me/525561303917" target="_blank"><p>+52 5561303917</p></a> 
+            </div>
+            
+            <div class="divInfo">
+                <p>Mexico City, Mexico</p>
+            </div>
+            
+            <div class="divIcons">
+                <a href="https://www.linkedin.com/in/magarciaa92" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.github.com/AlexDDks" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </article>
 </body>
 </html>
