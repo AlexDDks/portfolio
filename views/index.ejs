@@ -25,7 +25,7 @@
     <article class="contentArticle" id="article1">
 
         <div class="contentDiv">
-            <h1>About</h1>
+            <h1 class="h1About">About</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi vitae sint facilis adipisci voluptatem asperiores, laudantium, sit magni qui suscipit recusandae quos esse doloribus a error aliquam vel itaque porro ipsa quae odit nihil dolorem quasi? Aliquam, eos? Commodi voluptatem alias deleniti omnis incidunt</p>
             <div class="cara">
                 <img src="/img/cara.png" alt="">
@@ -41,49 +41,33 @@
         <img src="/img/logo.png" alt="logo">
     </div>
 
+    
+
     <section class="containerScroll">
-    <article class="contentArticle bottom" id="article2">
+        <div class="divScrollGif">
+            <img src="/img/scroll.gif" alt="">
+        </div>
+        <% for (const website of websites) { %>
+        <article class="contentArticle bottom" id="article2">
         <div class="contentDiv">
-            <h1>Work</h1>
-            <a href="/#"><div class="contentWork">
-                <img src="/img/website.jpeg" alt="">
+            <h1><%= website.title %></h1>
+            <a href="/website/<%= website.id %>">
+                <div class="contentWork">
+                    <img src="/img/<%= website.image %>" alt="">
 
                 <div class="contentMouseOver">
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JS</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>React.js</li>
-                        <li>MySQL</li>
+                        
+                        <% for (let i = 0; i < website.tecnologies.length; i++) { %>
+                            <li><%= website.tecnologies[i] %></li>
+                        <% } %>
                     </ul>
                 </div>
             </div></a> 
         </div>
 
     </article>
-
-    <article class="contentArticle bottom" id="article2">
-        <div class="contentDiv">
-            <h1>Work</h1>
-            <a href="/#"><div class="contentWork">
-                <img src="/img/website.jpeg" alt="">
-
-                <div class="contentMouseOver">
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JS</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>React.js</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-            </div></a> 
-        </div>
-    </article>
+    <% } %>
     </section> 
 
 
@@ -92,6 +76,7 @@
 
     <article class="contentArticle bottomInfo" id="article3">
         <div class="contact">
+            <h1>Contact</h1>
             <div class="divInfo">
                 <p>M.Sc. Manuel Alejandro Garcia Andrade</p>
             </div>
@@ -99,10 +84,6 @@
             <div class="divInfo">
                 <a href="mailto:magarciaa92@gmail.com?subject=Contact&body=Hi%20Alex%2C%20I%20have%20seen%20your%20portfolio%2C%20and%20I'm%20interested%20in%20contacting%20you" target="_blank"><p>magarciaa92@gmail.com</p></a>
             </div> 
-            
-            <div class="divInfo">
-               <a href="https://wa.me/525561303917" target="_blank"><p>+52 5561303917</p></a> 
-            </div>
             
             <div class="divInfo">
                 <p>Mexico City, Mexico</p>

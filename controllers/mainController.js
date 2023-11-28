@@ -1,6 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const dataPath = path.join(__dirname, '../data/data.json');
+const websites = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+
 const controller = {
     index: (req,res) => {
-        res.render("index");
+        res.render("index", {websites});
+
     },
 
     about: (req,res) => {
