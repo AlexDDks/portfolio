@@ -1,0 +1,98 @@
+/* GENERALS */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* MAIN CONTAINER */
+.mainSection{
+    height: 100vh;
+    display: flex;
+}
+/* MAIN CONTAINER ENDS */
+
+/* HEADER */
+header{
+    width: 35%;
+    height: 100vh;
+    position: fixed;
+}
+
+header nav{
+    width: 90%;
+    height: 80vh;
+    margin: 10vh auto ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: greenyellow 3px dotted; */
+}
+
+header h1{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 20px;
+
+}
+
+header .ulProjects li{
+    /* border: 1px red solid; */
+    padding: 5px;
+}
+
+header .ulMedia{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header li{
+    list-style: none;
+}
+/* HEADER ENDS */
+
+/* RIGHT CONTAINER */
+.contentArticle{
+    width: 65%;
+    margin: 10vh 0 0 35%;
+    border: 3px blue solid;
+}
+
+.contentArticle .contentAbout{
+    width: 70%;
+    margin: auto;
+    border: 3px red solid;
+}
+
+.contentAbout p{
+    font-size: 21px;
+    padding: 20px;
+    border: yellow 2px dotted;
+}
+
+
+
+

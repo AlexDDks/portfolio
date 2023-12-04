@@ -5,7 +5,7 @@ const websites = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
 const controller = {
     index: (req,res) => {
-        res.render("index", {websites});
+        res.render("index2", {websites});
 
     },
 
