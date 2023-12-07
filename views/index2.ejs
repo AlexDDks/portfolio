@@ -10,39 +10,13 @@
 </head>
 <body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="mainSection">
+<main class="mainSection">
     <header>
         <nav>
            <div class="divTop">
                 <h1>Alejandro Garcia</h1>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dicta assumenda illum.</p>
+                <h2>M.Sc. in Electronic Engineering</h2>
+                <p>"Tech for Good: With an open mind and constant learning, we navigate the digital era for meaningful impact."</p>
            </div>
 
             <ul class="ulProjects">
@@ -51,75 +25,80 @@
                 <a href="/#article3"><li>Projects</li></a>
                 <a href="/#article3"><li>Present</li></a>
             </ul>
-
-            <ul class="ulMedia">
-                <a href="/#article1"><li>About</li></a>
-                <a href="/#article2"><li>Experience</li></a>
-                <a href="/#article3"><li>Projects</li></a>
-                <a href="/#article3"><li>Present</li></a>
-            </ul>
         </nav>
+
+        <section>
+            <ul class="ulMedia">
+                <a href="/#"><li>About</li></a>
+                <a href="/#"><li>Experience</li></a>
+                <a href="/#"><li>Projects</li></a>
+                <a href="/#"><li>Present</li></a>
+            </ul>
+        </section>
     </header>
 
     <article class="contentArticle" id="article1">
         <div class="contentAbout">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi vitae sint facilis adipisci voluptatem asperiores, laudantium, sit magni qui suscipit recusandae quos esse doloribus a error aliquam vel itaque porro ipsa</p>
-
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis impedit sunt libero? Harum laboriosam expedita neque repellat, provident, laborum nisi nobis, incidunt assumenda ea quae?
+                It was only in 2021 when the world of web development and the technologies that keep us connected came into my life. I was amazed by how the world connects despite the vast distances. That's where I discovered my vocation.
             </p>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, exercitationem quaerat labore, dolorem inventore consequuntur omnis ex ducimus animi in velit sequi adipisci numquam, accusantium aliquam quas nihil quibusdam sunt. Fugit, incidunt unde. Nihil, ad.</p>
+            <p class="pDown">
+                Multiple front and backend programming courses have allowed me to work as an IT teacher for a year now, applying my knowledge in computer science, electronics, and research to the training of tomorrow's engineers.
+            </p>
+
+            <p class="pDown2 ">
+                I am thrilled by how technology is growing faster than we can keep up with. From my trench, I am adding my small grain of sand. 
+            </p>
+
+            <div class="cara">
+                <img src="/img/cara.png" alt="">
+            </div>
             
         </div>  
-        <!-- <div class="cara">
-            <img src="/img/cara.png" alt="">
-        </div> -->
 
+      
 
-
+        <section class="containerProjects" id="article2">
+            <!-- <div class="divScrollGif">
+                <img src="/img/scroll.gif" alt="">
+            </div> -->
+            <% for (const website of websites) { %>
+            <article class="articleWebsite">
+            <div class="contentDivWebsite">
+                <h1><%= website.title %></h1>
+                <a href="/website/<%= website.id %>">
+                    <div class="contentWork">
+                        <img src="/img/<%= website.image %>" alt="">
+    
+                    <div class="contentMouseOver">
+                        <ul>
+                            <% for (let i = 0; i < website.tecnologies.length; i++) { %>
+                                <li><%= website.tecnologies[i] %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div></a> 
+            </div>
+        </article>
+        <% } %>
+        </section>  
+    
+    
     </article>
 
-</section>
+  
 
-    <!-- <div class="logo">
-        <img src="/img/logo.png" alt="logo">
-    </div> -->
+</main>
+
+   
+
 
     
-<!-- 
-    <section class="containerScroll">
-        <div class="divScrollGif">
-            <img src="/img/scroll.gif" alt="">
-        </div>
-        <% for (const website of websites) { %>
-        <article class="contentArticle bottom" id="article2">
-        <div class="contentDiv">
-            <h1><%= website.title %></h1>
-            <a href="/website/<%= website.id %>">
-                <div class="contentWork">
-                    <img src="/img/<%= website.image %>" alt="">
-
-                <div class="contentMouseOver">
-                    <ul>
-                        
-                        <% for (let i = 0; i < website.tecnologies.length; i++) { %>
-                            <li><%= website.tecnologies[i] %></li>
-                        <% } %>
-                    </ul>
-                </div>
-            </div></a> 
-        </div>
-
-    </article>
-    <% } %>
-    </section> 
 
 
 
-
-
-    <article class="contentArticle bottomInfo" id="article3">
+   <!-- <article class="contentArticle bottomInfo" id="article3">
         <div class="contact">
             <h1>Contact</h1>
             <div class="divInfo">
@@ -139,6 +118,6 @@
                 <a href="https://www.github.com/AlexDDks" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
-    </article> -->
+    </article>  -->
 </body>
 </html>

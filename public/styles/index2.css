@@ -3,96 +3,170 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    text-decoration: none;
+    list-style: none;
 }
 
 html{
     scroll-behavior: smooth;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(8, 12, 56, 0.85);
     color: white;
+    /* overflow: hidden; */
 }
 
 a{
-    text-decoration: none;
     color: white;
 }
 
-/* MAIN CONTAINER */
+/* MAIN SECTION */
 .mainSection{
+    max-width: 1920px;
+    margin: auto;
     height: 100vh;
-    display: flex;
 }
-/* MAIN CONTAINER ENDS */
 
 /* HEADER */
 header{
-    width: 35%;
+    width: 30%;
     height: 100vh;
-    position: fixed;
+    top:0;
+    left: 7.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   position: fixed;
 }
 
 header nav{
-    width: 90%;
-    height: 80vh;
-    margin: 10vh auto ;
+    max-height: 864px;
+    margin-top: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* border: greenyellow 3px dotted; */
+
 }
 
 header h1{
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 45px;
 }
 
 header h2{
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 27px;
+    margin-top: 10px;
 }
 
 header p{
-    font-size: 20px;
-
-}
-
-header .ulProjects li{
-    /* border: 1px red solid; */
-    padding: 5px;
+    font-size: 18px;
+    margin-top: 15px;
 }
 
 header .ulMedia{
-    width: 70%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 60px;
 }
 
-header li{
-    list-style: none;
+header .ulProjects{
+    margin-top: 50px;
 }
+
+.ulProjects li{
+    padding: 5px 0;
+}
+
 /* HEADER ENDS */
 
-/* RIGHT CONTAINER */
+/* RIGHT ARTICLE */
 .contentArticle{
-    width: 65%;
-    margin: 10vh 0 0 35%;
-    border: 3px blue solid;
+    width: 45%;
+    margin: 0 0 0 47.5%;
 }
 
-.contentArticle .contentAbout{
+.contentAbout{
+    padding-top: 15vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.cara{
+    padding-top: 15vh;
+    position: absolute;
+    top:50%;
+    right: -10%;
+    z-index: -100;
+    transform: translateY(-50%);
+}
+
+.contentArticle p{
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.pDown, .pDown2{
+    margin-top: 40px;
     width: 70%;
-    margin: auto;
-    border: 3px red solid;
 }
 
-.contentAbout p{
-    font-size: 21px;
-    padding: 20px;
-    border: yellow 2px dotted;
+.pDown2{
+    width: 50%;
 }
 
 
 
+
+/* CONTAINER PROJECTS */
+
+.articleWebsite{
+    margin-top: 60px;
+}
+
+.articleWebsite h1{
+margin-bottom: 20px;
+font-size: 25px;
+}
+
+.articleWebsite .contentWork{
+    width: 100%;
+    position: relative;
+}
+
+.articleWebsite img{
+    width: 100%;
+}
+
+.contentMouseOver{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10%;
+}
+
+.articleWebsite:hover .contentMouseOver{
+    display: block;
+}
+
+.contentMouseOver ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contentMouseOver li{
+    width: 110px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
