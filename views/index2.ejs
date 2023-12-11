@@ -19,26 +19,28 @@
                 <p>"Tech for Good: With an open mind and constant learning, we navigate the digital era for meaningful impact."</p>
            </div>
 
-            <ul class="ulProjects">
-                <a href="/#article1"><li>About</li></a>
-                <a href="/#article2"><li>Experience</li></a>
-                <a href="/#article3"><li>Projects</li></a>
-                <a href="/#article3"><li>Present</li></a>
-            </ul>
+           <ul class="ulProjects">
+            <li><a href="/#article1">About</a></li>
+            <li><a href="/#article2">Experience</a></li>
+            <li><a href="/#article3">Projects</a></li>
+            <li><a href="/#article4">Present</a></li>
+        </ul>
+        
         </nav>
 
         <section>
             <ul class="ulMedia">
-                <a href="/#"><li>About</li></a>
-                <a href="/#"><li>Experience</li></a>
-                <a href="/#"><li>Projects</li></a>
-                <a href="/#"><li>Present</li></a>
+                <a href="/"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="/"><li><i class="fa-brands fa-github"></i></li></a>
+                <a href="/"><li><i class="fa-brands fa-instagram"></i></li></a>
+                <a href="/"><li><i class="fa-solid fa-envelope"></i></li></a>
             </ul>
         </section>
     </header>
 
-    <article class="contentArticle" id="article1">
-        <div class="contentAbout">
+    <article class="contentArticle">
+        <div class="contentAbout" id="article1">
+            <h1>About</h1>
             <p>
                 It was only in 2021 when the world of web development and the technologies that keep us connected came into my life. I was amazed by how the world connects despite the vast distances. That's where I discovered my vocation.
             </p>
@@ -57,16 +59,18 @@
             
         </div>  
 
-      
+      <section class="sectionExperience" id="article2">
+        <h1>Experience</h1>
+        <h2>Full Stack Web Development Instructor</h2>
+        <p> I currently serve as a Full Stack Web Programming Instructor. My expertise includes teaching front-end technologies such as HTML, CSS, JavaScript, React, and Vue.js, as well as back-end development using ORMs like Sequelize and Eloquent, handling databases in MySQL. Additionally, I am skilled in development environments like Express and Laravel, based on JavaScript and PHP, respectively. My practical approach and deep knowledge in these areas enable me to equip my students for the challenges of modern web developmen</p>
+      </section>
 
-        <section class="containerProjects" id="article2">
-            <!-- <div class="divScrollGif">
-                <img src="/img/scroll.gif" alt="">
-            </div> -->
+        <section class="containerProjects" id="article3">
+            <h1>Projects</h1>
             <% for (const website of websites) { %>
             <article class="articleWebsite">
             <div class="contentDivWebsite">
-                <h1><%= website.title %></h1>
+                <h2><%= website.title %></h2>
                 <a href="/website/<%= website.id %>">
                     <div class="contentWork">
                         <img src="/img/<%= website.image %>" alt="">
@@ -83,41 +87,51 @@
         </article>
         <% } %>
         </section>  
-    
-    
+
+        <section class="sectionPresent" id="article4">
+            <h1>Present</h1>
+        <p>"As I near the completion of my Ph.D. in Electronic Engineering, I'm enthusiastically pivoting towards Artificial Intelligence (AI) to revolutionize web development. My engineering background has honed my skills in tackling complex systems and analytical challenges, which I plan to apply in AI to boost my efficiency in web programming. I aim to integrate AI for automating mundane tasks and devising innovative solutions, significantly enhancing my productivity and creative capacity in web development. This blend of AI and web programming expertise positions me to create advanced and efficient digital solutions."</p>
+
+        <h2>Technologies I Master</h2>
+        
+            <h4>Front end</h4>
+            <ul>
+                <li>Html</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+
+            <h4>ORMs</h4>
+            <ul>
+                <li>Sequelize</li>
+                <li>Eloquent</li>
+            </ul>
+
+            <h5>Plus</h5>
+            <ul class="ulPlus">
+                <li>Git</li>
+                <li>SCRUM</li>
+                <li>Advanced English and Spanish (native)</li>
+                <li>PHP</li>
+                <li>MATLAB</li>
+                <li>C#</li>
+                <li>Teaching</li>
+            </ul>
+
+        <h3>Technologies I am Learning</h3>
+        <ul class="lastUl">
+            <li>Typescript</li>
+            <li>Python</li>
+        </ul>
+        </section>    
     </article>
-
-  
-
 </main>
 
-   
+<div class="logo">
+    <img src="/img/logo.png" alt="">
+</div>
 
-
-    
-
-
-
-   <!-- <article class="contentArticle bottomInfo" id="article3">
-        <div class="contact">
-            <h1>Contact</h1>
-            <div class="divInfo">
-                <p>M.Sc. Manuel Alejandro Garcia Andrade</p>
-            </div>
-    
-            <div class="divInfo">
-                <a href="mailto:magarciaa92@gmail.com?subject=Contact&body=Hi%20Alex%2C%20I%20have%20seen%20your%20portfolio%2C%20and%20I'm%20interested%20in%20contacting%20you" target="_blank"><p>magarciaa92@gmail.com</p></a>
-            </div> 
-            
-            <div class="divInfo">
-                <p>Mexico City, Mexico</p>
-            </div>
-            
-            <div class="divIcons">
-                <a href="https://www.linkedin.com/in/magarciaa92" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.github.com/AlexDDks" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-    </article>  -->
+<script src="/js/scrollManager.js"></script>
 </body>
 </html>

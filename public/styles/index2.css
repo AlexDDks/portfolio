@@ -66,13 +66,49 @@ header .ulMedia{
     margin-bottom: 60px;
 }
 
+.ulMedia i{
+    font-size: 26px;
+    color: white;
+}
+
 header .ulProjects{
     margin-top: 50px;
 }
 
-.ulProjects li{
+
+.ulProjects li {
     padding: 5px 0;
 }
+
+.ulProjects li a {
+    transition: color 0.3s;
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    display: inline-block; /* Permite que el pseudo-elemento se posicione correctamente */
+    position: relative; /* Establece la referencia para los pseudo-elementos absolutamente posicionados */
+}
+
+.ulProjects li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f0f; /* El color del subrayado */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.ulProjects li a.active::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.ulProjects li a:hover, .ulProjects li a.active {
+    color: #f0f; /* Cambia este color según tus preferencias */
+}
+
+
 
 /* HEADER ENDS */
 
@@ -87,6 +123,10 @@ header .ulProjects{
     position: relative;
     overflow: hidden;
 
+}
+
+.contentAbout h1{
+    margin-bottom: 10px;
 }
 
 .cara{
@@ -113,15 +153,37 @@ header .ulProjects{
 }
 
 
+/* sectionExperience */
+.sectionExperience{
+    margin-top: 70px;
+}
 
+.sectionExperience h1{
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.sectionExperience h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.sectionExperience p{
+    font-size: 22px;
+}
 
 /* CONTAINER PROJECTS */
 
-.articleWebsite{
+.containerProjects{
     margin-top: 60px;
 }
 
-.articleWebsite h1{
+.containerProjects h1{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.articleWebsite h2{
 margin-bottom: 20px;
 font-size: 25px;
 }
@@ -170,3 +232,56 @@ font-size: 25px;
     align-items: center;
 }
 
+/* sectionPresent */
+.sectionPresent{
+    margin-top: 70px;
+}
+
+.sectionPresent h1{
+    font-size: 22px;
+}
+
+.sectionPresent p{
+    margin-top: 10px;
+}
+
+.sectionPresent h2, h3, h4, h5{
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.sectionPresent ul{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.sectionPresent li{
+    margin: 0 10px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    padding: 5px 8px;
+}
+
+.ulPlus li{
+    margin-top: 10px;
+   }
+   
+.sectionPresent .lastUl{
+    padding-bottom: 25px;
+}
+
+/* logo */
+.logo{
+    width: 80px;
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+
+.logo img{
+    width: 100%;
+    border-radius: 40px;
+}
