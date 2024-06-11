@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/index2.css">
     <script src="https://kit.fontawesome.com/fa36d49c1a.js" crossorigin="anonymous"></script>
-    <script src="/js/scrollListener.js"></script>
+    <script src="/js/scrollManager.js"></script>
+    <script src="/js/itemHover.js" defer></script>
+
+
     <title>A. Garcia</title>
 </head>
 <body>
@@ -21,52 +24,123 @@
 
            <ul class="ulProjects">
             <li><a href="/#article1">About</a></li>
-            <li><a href="/#article2">Experience</a></li>
-            <li><a href="/#article3">Projects</a></li>
-            <li><a href="/#article4">Present</a></li>
+            <li><a href="/#article2">Professional Experience</a></li>
+            <li><a href="/#article3">Education</a></li>
+
+            <li><a href="/#article4">Projects</a></li>
+            <li><a href="/#article5">Present</a></li>
         </ul>
         
         </nav>
 
         <section>
             <ul class="ulMedia">
-                <a href="/"><li><i class="fa-brands fa-linkedin"></i></li></a>
-                <a href="/"><li><i class="fa-brands fa-github"></i></li></a>
-                <a href="/"><li><i class="fa-brands fa-instagram"></i></li></a>
-                <a href="/"><li><i class="fa-solid fa-envelope"></i></li></a>
+                <a href="https://www.linkedin.com/in/magarciaa92/" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://github.com/AlexDDks" target="_blank"><li><i class="fa-brands fa-github"></i></li></a>
+                <a href="https://www.instagram.com/alexddks/" target="_blank"><li><i class="fa-brands fa-instagram"></i></li></a>
+                <a href="mailto:magarciaa92@gmail.com?subject=Im%20interested%20in%20contact%20with%20you&body=Hi%20Alex%2C%20I%20have%20reach%20your%20portfalio.%20I%20would%20like%20to%20contact%20with%20you..." target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
             </ul>
         </section>
     </header>
 
     <article class="contentArticle">
+        <h1 class="h1AboutMe">About me</h1>
+
         <div class="contentAbout" id="article1">
-            <h1>About</h1>
             <p>
-                It was only in 2021 when the world of web development and the technologies that keep us connected came into my life. I was amazed by how the world connects despite the vast distances. That's where I discovered my vocation.
+                In 2021, I discovered the world of web development and the technologies that connect us across vast distances.
             </p>
-
+            
             <p class="pDown">
-                Multiple front and backend programming courses have allowed me to work as an IT teacher for a year now, applying my knowledge in computer science, electronics, and research to the training of tomorrow's engineers.
+                With extensive coursework in front and back-end programming, I have been working as an IT teacher for the past year and a half, imparting knowledge in computer science.
             </p>
-
-            <p class="pDown2 ">
-                I am thrilled by how technology is growing faster than we can keep up with. From my trench, I am adding my small grain of sand. 
+            
+            <p class="pDown2">
+                Enthralled by the rapid growth of technology, I strive to contribute my small part to its advancement.
             </p>
-
+            
             <div class="cara">
                 <img src="/img/cara.png" alt="">
             </div>
             
+            
         </div>  
 
-      <section class="sectionExperience" id="article2">
-        <h1>Experience</h1>
-        <h2>Full Stack Web Development Instructor</h2>
-        <p> I currently serve as a Full Stack Web Programming Instructor. My expertise includes teaching front-end technologies such as HTML, CSS, JavaScript, React, and Vue.js, as well as back-end development using ORMs like Sequelize and Eloquent, handling databases in MySQL. Additionally, I am skilled in development environments like Express and Laravel, based on JavaScript and PHP, respectively. My practical approach and deep knowledge in these areas enable me to equip my students for the challenges of modern web developmen</p>
-      </section>
+        
+        <h1 class="h1SectionExperience">Professional Experience</h1>      
 
-        <section class="containerProjects" id="article3">
-            <h1>Projects</h1>
+        <a href="https://tecmilenio.mx/es/campus/ferreria" target="_blank"><section class="sectionExperience" id="article2">
+        <div class="divDate">2023 - PRESENT</div>
+        <div class="divExperience">
+        <h2>Full Stack Web Development Instructor</h2>
+        <h3>Tecmilenio University</h2>
+
+        <p> I currently serve as a Full Stack Web Programming Instructor. My expertise includes teaching front and back-end development. My practical approach and deep knowledge in these areas enable me to equip my students for the challenges of modern web developmen</p>
+        <div class="divTech">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Vue.js</li>
+                <li>Node.js</li>
+                <li>EJS</li>
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    </a>
+
+    <h1 class="h1SectionExperience">Education</h1>      
+
+
+
+    <!-- <a href="https://posgrados.esimecu.ipn.mx/doctorado-en-comunicaciones-y-electronica" target="_blank">
+    <section class="sectionExperience below" id="article3">      
+
+        <div class="divDate">2020 - PRESENT</div>
+        <div class="divExperience">
+        <h2>PhD research fellow</h2>
+        <h3>IPN-CONAHCYT</h3>
+
+        <p> I am dedicated to research in topics related to electronic engineering, blending areas such as computing, physics, and mathematics in the search for novel materials for optoelectronics.</p>
+
+        <div class="divTech">
+            <ul>
+                <li>MATLAB</li>
+                <li>Mathematics</li>
+                <li>Physics</li>
+                <li>Electronics</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    </a> -->
+
+    <% for (const edu of education) { %>
+        <a href="<%= edu.link %>" target="_blank">
+            <section class="sectionExperience below" id="article3">      
+                <div class="divDate"><%= edu.date %></div>
+                <div class="divExperience">
+                    <h2><%= edu.title %></h2>
+                    <h3><%= edu.institution %></h3>
+                    <p><%= edu.description %></p>
+                    <div class="divTech">
+                        <ul>
+                            <% for (const tech of edu.technologies) { %>
+                            <li><%= tech %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </a>
+        <% } %>
+
+        <section class="containerProjects" id="article4">
             <% for (const website of websites) { %>
             <article class="articleWebsite">
             <div class="contentDivWebsite">
@@ -88,50 +162,74 @@
         <% } %>
         </section>  
 
-        <section class="sectionPresent" id="article4">
-            <h1>Present</h1>
-        <p>"As I near the completion of my Ph.D. in Electronic Engineering, I'm enthusiastically pivoting towards Artificial Intelligence (AI) to revolutionize web development. My engineering background has honed my skills in tackling complex systems and analytical challenges, which I plan to apply in AI to boost my efficiency in web programming. I aim to integrate AI for automating mundane tasks and devising innovative solutions, significantly enhancing my productivity and creative capacity in web development. This blend of AI and web programming expertise positions me to create advanced and efficient digital solutions."</p>
+        <section class="sectionPresent" id="article5">
+        <p>"As I near the completion of my PhD in Electronics, I am looking forward to the development of Artificial Intelligence (AI). My engineering background has honed my skills in tackling complex systems and analytical challenges, which I plan to apply in AI to increase my efficiency in web programming and digital systems development. My goal is to integrate AI to automate mundane tasks and devise innovative solutions, significantly improving my productivity and creative capacity."</p>
 
         <h2>Technologies I Master</h2>
-        
+            
+        <section class="bottomSection">
+        <div>
             <h4>Front end</h4>
             <ul>
-                <li>Html</li>
-                <li>CSS</li>
+                <li> Html</li>
+                <li> CSS</li>
                 <li>JavaScript</li>
                 <li>React</li>
             </ul>
+        </div>
 
-            <h4>ORMs</h4>
+        <div>
+            <h4>ORMs/backend</h4>
             <ul>
                 <li>Sequelize</li>
                 <li>Eloquent</li>
+                <li>MySQL</li>
             </ul>
+        </div>
+        </section>
 
+        <section class="bottomSection two">
+        <div>
+            <h4>Frameworks</h4>
+            <ul class="ulFrameworks">
+                <li>Express</li>
+                <li>Laravel</li>
+            </ul>
+        </div>
+
+        <div>
             <h5>Plus</h5>
             <ul class="ulPlus">
                 <li>Git</li>
                 <li>SCRUM</li>
-                <li>Advanced English and Spanish (native)</li>
+                <li>Advanced English</li>
                 <li>PHP</li>
-                <li>MATLAB</li>
                 <li>C#</li>
+                <li>Figma</li>
                 <li>Teaching</li>
             </ul>
+        </div>
+        </section>
 
         <h3>Technologies I am Learning</h3>
         <ul class="lastUl">
             <li>Typescript</li>
             <li>Python</li>
         </ul>
-        </section>    
+        </section>
+        
+        <div class="finalText">
+            <p>This page was coded using Visual Studio Code with HTML-CSS-JS technologies. The Express framework in the Node.js environment as well as EJS template engine were also used.</p>
+        </div>
     </article>
 </main>
+
 
 <div class="logo">
     <img src="/img/logo.png" alt="">
 </div>
 
-<script src="/js/scrollManager.js"></script>
+
+
 </body>
 </html>

@@ -1,5 +1,9 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
 /* GENERALS */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,74 +11,92 @@
     list-style: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
-    background-color: rgba(8, 12, 56, 0.85);
-    color: white;
-    /* overflow: hidden; */
+    background-color: rgb(10, 15, 29); /* Fondo principal oscuro */
+    color: #E2E6EF; /* Texto principal */
+    font-family: 'Open Sans', sans-serif;
 }
 
-a{
-    color: white;
+a {
+    color: #E2E6EF;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+    font-size: 55px; /* Tamaño absoluto */
+}
+
+h2 {
+    font-size: 22px; /* Tamaño absoluto */
+}
+
+h3, h4, h5 {
+    font-size: 18px; /* Tamaño absoluto */
 }
 
 /* MAIN SECTION */
-.mainSection{
-    max-width: 1920px;
+.mainSection {
+    max-width: 100%;
     margin: auto;
     height: 100vh;
 }
 
 /* HEADER */
-header{
+header {
     width: 30%;
     height: 100vh;
-    top:0;
+    top: 0;
     left: 7.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   position: fixed;
+    position: fixed;
 }
 
-header nav{
-    max-height: 864px;
-    margin-top: 15vh;
+header nav {
+    max-height: 90%;
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
 
-header h1{
-    font-size: 45px;
+header h1 {
+    font-size: 55px;
+    opacity: 1;
 }
 
-header h2{
-    font-size: 27px;
+header h2 {
+    font-size: 22px;
     margin-top: 10px;
+    opacity: 0.85;
 }
 
-header p{
+header p {
     font-size: 18px;
     margin-top: 15px;
+    opacity: 0.75;
 }
 
-header .ulMedia{
+header .ulMedia {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 60px;
 }
 
-.ulMedia i{
+.ulMedia i {
     font-size: 26px;
-    color: white;
+    color: #FFFFFF;
+    opacity: 1;
 }
 
-header .ulProjects{
+header .ulProjects {
     margin-top: 50px;
 }
-
 
 .ulProjects li {
     padding: 5px 0;
@@ -82,9 +104,9 @@ header .ulProjects{
 
 .ulProjects li a {
     transition: color 0.3s;
-    text-decoration: none; /* Elimina el subrayado por defecto */
-    display: inline-block; /* Permite que el pseudo-elemento se posicione correctamente */
-    position: relative; /* Establece la referencia para los pseudo-elementos absolutamente posicionados */
+    text-decoration: none; 
+    display: inline-block; 
+    position: relative; 
 }
 
 .ulProjects li a::before {
@@ -94,113 +116,175 @@ header .ulProjects{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #f0f; /* El color del subrayado */
+    background-color: #32CD32; 
     visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 
 .ulProjects li a.active::before {
     visibility: visible;
     width: 100%;
+    opacity: 1;
 }
 
 .ulProjects li a:hover, .ulProjects li a.active {
-    color: #f0f; /* Cambia este color según tus preferencias */
+    color: #32CD32;
+    opacity: 1;
 }
 
-
-
-/* HEADER ENDS */
-
 /* RIGHT ARTICLE */
-.contentArticle{
+
+
+.contentArticle {
     width: 45%;
     margin: 0 0 0 47.5%;
 }
 
-.contentAbout{
-    padding-top: 15vh;
+
+.contentArticle .h1AboutMe{
+    margin-top: 10%;
+}
+
+.contentAbout {
     position: relative;
     overflow: hidden;
 
 }
 
-.contentAbout h1{
-    margin-bottom: 10px;
-}
-
-.cara{
-    padding-top: 15vh;
+.cara {
+    width: 100%;
     position: absolute;
-    top:50%;
-    right: -10%;
+    /* top: 50%; */
     z-index: -100;
-    transform: translateY(-50%);
+    bottom: 0;
+    /* transform: translateY(-50%); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 
-.contentArticle p{
+.cara img {
+    width: 80%;
+    position: relative;
+}
+
+.contentArticle p {
     font-size: 22px;
+    font-weight: bold;
     line-height: 1.2;
+    -webkit-text-stroke: .5px  rgb(0, 0, 0);; /* Borde rojo de 1px */
+
 }
 
-.pDown, .pDown2{
+.pDown, .pDown2 {
     margin-top: 40px;
     width: 70%;
 }
 
-.pDown2{
+.pDown2 {
     width: 50%;
 }
 
 
+
 /* sectionExperience */
-.sectionExperience{
-    margin-top: 70px;
+.h1SectionExperience{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: underline;
 }
 
-.sectionExperience h1{
-    margin-bottom: 10px;
-    font-size: 26px;
+.sectionExperience {
+    margin-top: 50px;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 250ms;
+    opacity: 1;
+    background-color: #282C34; /* Fondo de las secciones */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde */
 }
 
-.sectionExperience h2{
-    margin-bottom: 10px;
+.sectionExperience:hover {
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.1);
+    background-color: rgba(16, 24, 47, 0.7);
+}
+
+.sectionExperience.below {
+    margin-top: 20px;
+}
+
+.sectionExperience .divDate {
+    width: 25%;
+}
+
+.sectionExperience .divExperience {
+    width: 75%;
+    opacity: 1;
+    transition: all 150ms;
+}
+
+.sectionExperience h2 {
+    margin: -3px 0 10px 0;
     font-size: 22px;
 }
 
-.sectionExperience p{
+.sectionExperience h3{
+    font-size: 20px;
+    margin: 5px 0 10px 0;
+
+}
+
+.sectionExperience p {
     font-size: 22px;
+}
+
+.sectionExperience .divTech {
+    margin-top: 15px;
+}
+
+.sectionExperience ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.sectionExperience li {
+    padding: 8px 10px;
+    margin: 5px 5px 0 0;
+    border: 1px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 10px;
 }
 
 /* CONTAINER PROJECTS */
-
-.containerProjects{
+.containerProjects {
     margin-top: 60px;
 }
 
-.containerProjects h1{
+.containerProjects h1 {
     margin-bottom: 10px;
     font-size: 22px;
 }
 
-.articleWebsite h2{
-margin-bottom: 20px;
-font-size: 25px;
+.articleWebsite h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
 }
 
-.articleWebsite .contentWork{
+.articleWebsite .contentWork {
     width: 100%;
     position: relative;
 }
 
-.articleWebsite img{
+.articleWebsite img {
     width: 100%;
 }
 
-.contentMouseOver{
+.contentMouseOver {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     display: none;
     position: absolute;
     top: 0;
@@ -208,11 +292,11 @@ font-size: 25px;
     padding: 10%;
 }
 
-.articleWebsite:hover .contentMouseOver{
+.articleWebsite:hover .contentMouseOver {
     display: block;
 }
 
-.contentMouseOver ul{
+.contentMouseOver ul {
     width: 100%;
     height: 100%;
     display: flex;
@@ -221,7 +305,7 @@ font-size: 25px;
     flex-wrap: wrap;
 }
 
-.contentMouseOver li{
+.contentMouseOver li {
     width: 110px;
     height: 60px;
     background-color: black;
@@ -233,55 +317,97 @@ font-size: 25px;
 }
 
 /* sectionPresent */
-.sectionPresent{
+.sectionPresent {
     margin-top: 70px;
 }
 
-.sectionPresent h1{
+.sectionPresent h1 {
     font-size: 22px;
 }
 
-.sectionPresent p{
+.sectionPresent p {
     margin-top: 10px;
 }
 
-.sectionPresent h2, h3, h4, h5{
+.sectionPresent h2, h3 {
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+/* bottomSection */
+.bottomSection {
     margin-top: 20px;
-    font-size: 22px;
-}
-
-.sectionPresent ul{
-    margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
+    align-content: center;
     flex-wrap: wrap;
 }
 
-.sectionPresent li{
-    margin: 0 10px;
+.bottomSection div {
+    width: 50%;
+}
+
+h4, h5 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.sectionPresent ul {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: #32CD32; /* Color de acento verde */
+}
+
+.sectionPresent .ulFrameworks {
+    height: 85%;
+    align-items: center;
+}
+
+.sectionPresent li {
+    margin: 5px 10px;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 3px;
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     padding: 5px 8px;
 }
 
-.ulPlus li{
+.ulFrameworks li {
+    height: 35px;
+}
+
+.ulPlus li {
     margin-top: 10px;
-   }
-   
-.sectionPresent .lastUl{
+}
+
+.sectionPresent .lastUl {
     padding-bottom: 25px;
 }
 
 /* logo */
-.logo{
+.logo {
     width: 80px;
     position: absolute;
-    top:20px;
+    top: 20px;
     right: 20px;
 }
 
-.logo img{
+.logo img {
     width: 100%;
     border-radius: 40px;
 }
+
+/* finalText */
+.finalText {
+    right: 0;
+    padding: 50px 0 30px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.finalText p {
+    width: 400px;
+    font-size: 18px;
+}
+

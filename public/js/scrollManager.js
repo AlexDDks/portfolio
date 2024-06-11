@@ -1,47 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.ulProjects li a');
 
-    // Establecer la clase 'active' en el primer enlace al cargar la página
-    if (links.length > 0) {
-        links[0].classList.add('active');
-    }
+    function setActiveLink() {
+        let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        let foundActive = false;
 
-    // Función para eliminar la clase 'active' de todos los enlaces y agregarla al enlace actual
-    function setActiveLink(currentLink) {
         links.forEach(link => {
-            link.classList.remove('active');
+            let targetId = link.getAttribute('href').split('#')[1];
+            let targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                // Activar la sección cuando su parte superior entre en el tercio superior de la ventana
+                let offsetToActivate = window.innerHeight / 3;
+                let sectionTop = targetSection.offsetTop;
+
+                if (scrollPosition + offsetToActivate >= sectionTop) {
+                    links.forEach(lnk => lnk.classList.remove('active'));
+                    link.classList.add('active');
+                    foundActive = true;
+                }
+            }
         });
-        if (currentLink) {
-            currentLink.classList.add('active');
+
+        // Si ninguna sección ha sido activada, activar la primera por defecto
+        if (!foundActive) {
+            links.forEach(lnk => lnk.classList.remove('active'));
+            links[0].classList.add('active');
         }
     }
 
     links.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); // Previene el comportamiento por defecto del enlace
+            e.preventDefault();
             let targetId = this.getAttribute('href').split('#')[1];
             let targetSection = document.getElementById(targetId);
 
             if (targetSection) {
                 window.scrollTo({
-                    top: targetSection.offsetTop - 50, // Ajusta este valor si es necesario
+                    top: targetSection.offsetTop - 50,
                     behavior: 'smooth'
                 });
-                setActiveLink(this);
+                setActiveLink();
             }
         });
     });
 
-    window.addEventListener('scroll', () => {
-        let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        let currentLink = null;
+    window.addEventListener('scroll', setActiveLink);
 
-        document.querySelectorAll('.contentArticle > section, .contentArticle > div').forEach((section) => {
-            if (section.offsetTop - 50 <= scrollPosition && (section.offsetTop + section.offsetHeight - 50) > scrollPosition) { // Ajusta este valor si es necesario
-                currentLink = document.querySelector('.ulProjects li a[href*=' + section.id + ']');
-            }
-        });
-
-        setActiveLink(currentLink);
-    });
+    // Activar el primer enlace (article1) por defecto al cargar la página
+    setActiveLink();
 });

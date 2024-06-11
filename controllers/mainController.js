@@ -1,11 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const dataPath = path.join(__dirname, '../data/data.json');
+const dataEducationPath = path.join(__dirname, '../data/education.json');
+
 const websites = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+const education = JSON.parse(fs.readFileSync(dataEducationPath, 'utf-8'));
 
 const controller = {
     index: (req,res) => {
-        res.render("index2", {websites});
+        res.render("index2", {websites, education});
 
     },
 
