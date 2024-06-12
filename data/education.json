@@ -3,8 +3,7 @@
         "date": "2024 - PRESENT",
         "title": "IBM AI Developer Professional Certificate",
         "institution": "Coursera/IBM",
-        "description": "The IBM AI Developer Professional Certificate is an in-depth program designed to equip you with the essential skills and knowledge to excel in the field of artificial intelligence (AI). This course is ideal for those looking to deepen their understanding of AI development, covering both theoretical and practical aspects.",
-        "technologies": ["Machine Learning", "Deep Learning", "Python Programming", "TensorFlow"],
+        "description": "This certificate provides essential AI skills and knowledge, covering both theoretical and practical aspects of AI development.",        "technologies": ["Machine Learning", "Deep Learning", "Python Programming", "TensorFlow"],
         "link": "https://www.coursera.org/professional-certificates/applied-artifical-intelligence-ibm-watson-ai#courses"
     },
 
@@ -12,7 +11,7 @@
         "date": "2024 ",
         "title": "FIGMA ESSENTIAL/ADVANCED",
         "institution": "Linkedin Learning",
-        "description": "The Figma Essential/Advanced course on LinkedIn Learning is designed to provide both beginners and experienced designers with a comprehensive understanding of Figma, a powerful web-based UI/UX design tool. This course covers everything from the fundamentals to advanced techniques, ensuring you can create professional and polished designs.",
+        "description": "This course offers a thorough understanding of Figma, from basics to advanced techniques, for creating polished UI/UX designs.",
         "technologies": ["UI/UX Design Principles", "Interactive Prototyping", "Responsive Design", "Design Systems and Components"],
         "link": "https://www.coursera.org/professional-certificates/applied-artifical-intelligence-ibm-watson-ai#courses"
     },
@@ -20,7 +19,7 @@
         "date": "2022 - 2023",
         "title": "Full Stack Web Development",
         "institution": "Digital House",
-        "description": "This course provided comprehensive training in full stack web development, covering both front-end and back-end technologies. Students gained hands-on experience with HTML, CSS, JavaScript, and various frameworks and tools necessary for building modern web applications.",
+        "description": "Comprehensive training in front-end and back-end development, including hands-on experience with HTML, CSS, JavaScript, and various frameworks.",
         "technologies": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MySQL"],
         "link": ""
     },
@@ -29,7 +28,7 @@
         "date": "2020 - PRESENT",
         "title": "PhD research fellow",
         "institution": "IPN/CONAHCYT",
-        "description": "I am dedicated to research in topics related to electronic engineering, blending areas such as computing, physics, and mathematics in the search for novel materials for optoelectronics.",
+        "description": "I conduct research in electronic engineering, integrating computing, physics, and mathematics to discover new materials for optoelectronics.",
         "technologies": ["MATLAB", "Mathematics", "Physics", "Electronics"],
         "link": "https://posgrados.esimecu.ipn.mx/doctorado-en-comunicaciones-y-electronica"
     }

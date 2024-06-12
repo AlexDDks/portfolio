@@ -8,7 +8,7 @@ const education = JSON.parse(fs.readFileSync(dataEducationPath, 'utf-8'));
 
 const controller = {
     index: (req,res) => {
-        res.render("index2", {websites, education});
+        res.render("index", {websites, education});
 
     },
 

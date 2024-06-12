@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index.css">
+    <script src="https://kit.fontawesome.com/fa36d49c1a.js" crossorigin="anonymous"></script>
+    <script src="/js/scrollManager.js"></script>
+    <script src="/js/itemHover.js" defer></script>
+    <title>A. Garcia</title>
+</head>
+<body>
+<main class="mainSection">
+    <header>
+        <nav>
+            <div class="divTop">
+                <h1>Alejandro Garcia</h1>
+                <h2>M.Sc. in Electronic Engineering</h2>
+                <p>"Advancing Technology: Embracing continuous learning to drive impactful solutions in the digital age."</p>
+            </div>
+            <ul class="ulProjects">
+                <li><a href="/#article1">About</a></li>
+                <li><a href="/#article2">Professional Experience</a></li>
+                <li><a href="/#article3">Education</a></li>
+                <li><a href="/#article4">Projects</a></li>
+                <li><a href="/#article5">Technologies</a></li>
+            </ul>
+        </nav>
+        <section>
+            <ul class="ulMedia">
+                <a href="https://www.linkedin.com/in/magarciaa92/" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://github.com/AlexDDks" target="_blank"><li><i class="fa-brands fa-github"></i></li></a>
+                <a href="mailto:magarciaa92@gmail.com?subject=I%20am%20interested%20in%20contacting%20you&body=Hi%20Alex,%20I%20came%20across%20your%20portfolio.%20I%20would%20like%20to%20get%20in%20touch%20with%20you..." target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+            </ul>
+        </section>
+    </header>
+    <article class="contentArticle">
+        <h1 class="h1AboutMe">About Me</h1>
+        <div class="contentAbout" id="article1">
+            <p>In 2021, I ventured into the world of web development, discovering the technologies that bridge vast distances and connect people globally.</p>
+            <p class="pDown">With extensive training in front-end and back-end programming, I have been an IT instructor for the past year and a half, educating future engineers in computer science.</p>
+            <p class="pDown2">Driven by the rapid technological advancements, I aim to contribute to this growth through innovative solutions and continuous learning.</p>
+            <div class="cara">
+                <img src="/img/cara.png" alt="">
+            </div>
+        </div>
+
+        <h1 class="h1SectionExperience">Professional Experience</h1>
+        <a href="https://tecmilenio.mx/es/campus/ferreria" target="_blank" >
+        <section class="sectionExperience" id="article2">
+                <div class="divDate">2023 - PRESENT</div>
+                <div class="divExperience">
+                    <h2>Full Stack Web Development Instructor</h2>
+                    <h3>Tecmilenio University</h3>
+                    <p>I am a Full Stack Web Programming Instructor, specializing in front and back-end development. My hands-on approach and deep expertise prepare students for modern web development challenges.</p>
+                    <div class="divTech">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                            <li>Node.js</li>
+                            <li>EJS</li>
+                            <li>PHP</li>
+                            <li>Laravel</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </a>    
+
+        <h1 class="h1SectionExperience">Education/Courses</h1>
+        <% for (const edu of education) { %>
+            <section class="sectionExperience below" id="article3">
+                <div class="divDate"><%= edu.date %></div>
+                <div class="divExperience">
+                    <h2><%= edu.title %></h2>
+                    <h3><%= edu.institution %></h3>
+                    <p><%= edu.description %></p>
+                    <div class="divTech">
+                        <ul>
+                            <% for (const tech of edu.technologies) { %>
+                            <li><%= tech %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        <% } %>
+        <h1 class="h1SectionProjects">Projects</h1>
+        <section class="containerProjects" id="article4">
+            <% for (const website of websites) { %>
+            <article class="articleWebsite">
+                <div class="contentDivWebsite">
+                    <h2 style="padding-bottom: 10px;"><%= website.title %></h2>
+                    <h3 style="padding-bottom: 10px;"><%= website.title_1 %></h3>
+                    <p style="padding-bottom: 10px;"><%= website.description %></p>
+                    <a href="/website/<%= website.id %>">
+                        <div class="contentWork">
+                            <img src="/img/<%= website.image %>" alt="">
+                            <div class="contentMouseOver">
+                                <ul>
+                                    <% for (let i = 0; i < website.tecnologies.length; i++) { %>
+                                    <li><%= website.tecnologies[i] %></li>
+                                    <% } %>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+            <% } %>
+        </section>
+        <section class="sectionPresent" id="article5">
+<p>"As I near the completion of my PhD in Electronics, I am eager to apply my engineering expertise in web programming and digital systems development. My background has equipped me with strong analytical skills and the ability to tackle complex systems. I aim to develop efficient, scalable, and innovative web solutions, contributing to a dynamic team."
+
+</p>
+ <h1>Technologies:</h1>
+            <section class="bottomSection">
+                <div>
+                    <h4>Front End</h4>
+                    <ul>
+                        <li>HTML/EJS</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Back End/ORMs</h4>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Sequelize</li>
+                        <li>PHP</li>
+                        <li>Eloquent</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="bottomSection two">
+                <div>
+                    <h4>Frameworks</h4>
+                    <ul class="ulFrameworks">
+                        <li>Express</li>
+                        <li>Laravel</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Plus</h5>
+                    <ul class="ulPlus">
+                        <li>Git</li>
+                        <li>SCRUM</li>
+                        <li>Advanced English</li>
+                        <li>Figma</li>
+                        <li>Generative AI</li>
+                    </ul>
+                </div>
+            </section>
+            <h2>Technologies I am Learning</h2>
+            <ul class="lastUl">
+                <li>Python</li>
+                <li>AI</li>
+            </ul>
+        </section>
+        <div class="finalText">
+            <p>This page was coded using Visual Studio Code with HTML-CSS-JS technologies. The Express framework in the Node.js environment as well as EJS template engine were also used.</p>
+        </div>
+    </article>
+</main>
+
+</body>
+</html>

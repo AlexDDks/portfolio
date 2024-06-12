@@ -13,13 +13,13 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: rgb(10, 15, 29); /* Fondo principal oscuro */
-    color: #E2E6EF; /* Texto principal */
+    background-color: rgb(28, 31, 38); /* Fondo principal oscuro */
+    color: rgb(226, 230, 239); /* Texto principal */
     font-family: 'Open Sans', sans-serif;
 }
 
 a {
-    color: #E2E6EF;
+    color: rgb(226, 230, 239);
 }
 
 h1, h2, h3, h4, h5 {
@@ -89,13 +89,13 @@ header .ulMedia {
 }
 
 .ulMedia i {
-    font-size: 26px;
-    color: #FFFFFF;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
     opacity: 1;
 }
 
 header .ulProjects {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .ulProjects li {
@@ -104,9 +104,10 @@ header .ulProjects {
 
 .ulProjects li a {
     transition: color 0.3s;
-    text-decoration: none; 
-    display: inline-block; 
-    position: relative; 
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
 }
 
 .ulProjects li a::before {
@@ -116,7 +117,7 @@ header .ulProjects {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #32CD32; 
+    background-color: rgb(50, 205, 50);
     visibility: hidden;
     transition: all 150ms ease-in-out;
 }
@@ -128,36 +129,30 @@ header .ulProjects {
 }
 
 .ulProjects li a:hover, .ulProjects li a.active {
-    color: #32CD32;
+    color: rgb(50, 205, 50);
     opacity: 1;
 }
 
 /* RIGHT ARTICLE */
-
-
 .contentArticle {
     width: 45%;
     margin: 0 0 0 47.5%;
 }
 
-
-.contentArticle .h1AboutMe{
+.contentArticle .h1AboutMe {
     margin-top: 10%;
 }
 
 .contentAbout {
     position: relative;
     overflow: hidden;
-
 }
 
 .cara {
     width: 100%;
     position: absolute;
-    /* top: 50%; */
     z-index: -100;
     bottom: 0;
-    /* transform: translateY(-50%); */
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
@@ -169,11 +164,10 @@ header .ulProjects {
 }
 
 .contentArticle p {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
-    -webkit-text-stroke: .5px  rgb(0, 0, 0);; /* Borde rojo de 1px */
-
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0); /* Borde negro de 0.5px */
 }
 
 .pDown, .pDown2 {
@@ -185,13 +179,12 @@ header .ulProjects {
     width: 50%;
 }
 
-
-
 /* sectionExperience */
-.h1SectionExperience{
+.h1SectionExperience {
     font-size: 35px;
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
     text-decoration: underline;
 }
 
@@ -202,7 +195,7 @@ header .ulProjects {
     border-radius: 10px;
     transition: all 250ms;
     opacity: 1;
-    background-color: #282C34; /* Fondo de las secciones */
+    background-color: rgb(40, 44, 52); /* Fondo de las secciones */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Borde */
 }
 
@@ -230,14 +223,13 @@ header .ulProjects {
     font-size: 22px;
 }
 
-.sectionExperience h3{
+.sectionExperience h3 {
     font-size: 20px;
     margin: 5px 0 10px 0;
-
 }
 
 .sectionExperience p {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .sectionExperience .divTech {
@@ -258,18 +250,33 @@ header .ulProjects {
 }
 
 /* CONTAINER PROJECTS */
+.h1SectionProjects {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+
 .containerProjects {
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .containerProjects h1 {
-    margin-bottom: 10px;
-    font-size: 22px;
+    margin: 0;
+    font-size: 50px;
+}
+
+.articleWebsite {
+    margin-bottom: 50px;
 }
 
 .articleWebsite h2 {
-    margin-bottom: 20px;
     font-size: 25px;
+}
+
+.articleWebsite h3 {
+    margin-top: 0;
 }
 
 .articleWebsite .contentWork {
@@ -277,6 +284,9 @@ header .ulProjects {
     position: relative;
 }
 
+.articleWebsite p{
+    font-size: 18px;
+}
 .articleWebsite img {
     width: 100%;
 }
@@ -284,12 +294,13 @@ header .ulProjects {
 .contentMouseOver {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.6);
     display: none;
     position: absolute;
     top: 0;
     right: 0;
     padding: 10%;
+    
 }
 
 .articleWebsite:hover .contentMouseOver {
@@ -301,37 +312,46 @@ header .ulProjects {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-content: space-evenly;
+    align-content: center;
     flex-wrap: wrap;
 }
 
 .contentMouseOver li {
-    width: 110px;
-    height: 60px;
-    background-color: black;
-    color: white;
+    /* width: 110px;
+    height: 60px; */
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    margin: 5px;
+    border: 2px rgb(226, 230, 239) solid;
+    
 }
 
 /* sectionPresent */
 .sectionPresent {
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .sectionPresent h1 {
-    font-size: 22px;
-}
+    font-size: 35px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-decoration: underline;}
 
 .sectionPresent p {
     margin-top: 10px;
 }
 
-.sectionPresent h2, h3 {
+.sectionPresent h2 {
+    text-align: center;
     margin-top: 40px;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 /* bottomSection */
@@ -344,7 +364,11 @@ header .ulProjects {
 }
 
 .bottomSection div {
-    width: 50%;
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 20px 1px rgba(226, 230, 239, 0.5);
+    border-radius: 10px;
 }
 
 h4, h5 {
@@ -357,7 +381,7 @@ h4, h5 {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    color: #32CD32; /* Color de acento verde */
+    color: rgb(50, 205, 50); /* Color de acento verde */
 }
 
 .sectionPresent .ulFrameworks {
@@ -403,11 +427,8 @@ h4, h5 {
     right: 0;
     padding: 50px 0 30px 0;
     display: flex;
-    justify-content: end;
 }
 
 .finalText p {
-    width: 400px;
     font-size: 18px;
 }
-

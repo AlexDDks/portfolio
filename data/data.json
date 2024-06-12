@@ -1,26 +1,29 @@
 [
     {
-     "id" : 1,
-     "title" : "website1",
-     "tecnologies" : ["HTML", "CSS", "JavaScript", "Node.JS", "Express", "React.JS", "MySQL"],
-     "image" : "website.jpeg"
+        "id": 1,
+        "title": "As a Programmer",
+        "title_1": "E-commerce Platform",
+        "description": "Developed a complete and responsive e-commerce platform using Node.js. The application features user authentication, item creation, and shopping functionalities.",
+        "tecnologies": ["HTML", "CSS", "JavaScript", "Node.js/Express", "MySQL", "Express", "APIs"],
+        "image": "techyNet.png",
+        "link": ""
     },
     {
-    "id" : 2,
-    "title" : "website2",
-    "tecnologies" : ["PHP", "CSS", "bootstrap","Laravel", "MySQL"],
-    "image" : "website.jpeg"
+        "id": 2,
+        "title": "As an Instructor",
+        "title_1": "Educational Resources",
+        "description": "Created extensive educational materials on Full Stack Programming and related topics. Available for download to support learning and development.",
+        "tecnologies": ["Download here"],
+        "image": "conFondo.jpg",
+        "link": ""
     },
     {
-        "id" : 3,
-        "title" : "website3",
-        "tecnologies" : ["HTML", "CSS", "JavaScript", "Node.JS", "Express", "React.JS", "MySQL"],
-        "image" : "website.jpeg"
-       },
-       {
-       "id" : 4,
-       "title" : "website4",
-       "tecnologies" : ["PHP", "CSS", "bootstrap","Laravel", "MySQL"],
-       "image" : "website.jpeg"
-       }
+        "id": 3,
+        "title": "As a Content Creator",
+        "title_1": "Online Education Platform",
+        "description": "Founded an online school aimed at providing accessible education to the community, focusing on Full Stack Web Development, IT, and Electronics.",
+        "tecnologies": ["Full Stack Web Development", "IT", "Electronics"],
+        "image": "website.jpeg",
+        "link": ""
+    }
 ]

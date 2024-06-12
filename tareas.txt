@@ -1,1 +1,4 @@
-Trabajar en el area de projects para establecer mis proyectos completos como profe y digitales
+- Comenzar a enfatizar el material didáctico que he hecho y subirlo a nube o plataforma para lectura/descarga
+- Ingresar el proyecto en laravel de DAW y algunos otros más papas, podemos hacer más chico el apartado como el portafolio de brittany para que quepan bien los proyectos
+- Subir a plataforma mis certificados
+- Comenzar a hacer el cv
