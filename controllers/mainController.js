@@ -1,14 +1,16 @@
 const fs = require('fs');
 const path = require('path');
-const dataPath = path.join(__dirname, '../data/data.json');
+const dataProjectsPath = path.join(__dirname, '../data/projects.json');
 const dataEducationPath = path.join(__dirname, '../data/education.json');
+const dataProgramerPath = path.join(__dirname, '../data/programer.json');
 
-const websites = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+const projects = JSON.parse(fs.readFileSync(dataProjectsPath, 'utf-8'));
 const education = JSON.parse(fs.readFileSync(dataEducationPath, 'utf-8'));
+const programer = JSON.parse(fs.readFileSync(dataProgramerPath, 'utf-8'));
 
 const controller = {
     index: (req,res) => {
-        res.render("index", {websites, education});
+        res.render("index", {projects, education, programer});
 
     },
 

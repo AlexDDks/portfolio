@@ -13,13 +13,13 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: rgb(28, 31, 38); /* Fondo principal oscuro */
-    color: rgb(226, 230, 239); /* Texto principal */
+    background-color: rgb(34, 40, 49); /* Fondo principal oscuro */
+    color: rgb(238, 238, 238); /* Texto principal */
     font-family: 'Open Sans', sans-serif;
 }
 
 a {
-    color: rgb(226, 230, 239);
+    color: rgb(238, 238, 238);
 }
 
 h1, h2, h3, h4, h5 {
@@ -28,14 +28,17 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: 55px; /* Tamaño absoluto */
+    color: rgb(238, 238, 238);
 }
 
 h2 {
     font-size: 22px; /* Tamaño absoluto */
+    color: rgb(189, 195, 199);
 }
 
 h3, h4, h5 {
     font-size: 18px; /* Tamaño absoluto */
+    color: rgb(189, 195, 199);
 }
 
 /* MAIN SECTION */
@@ -90,7 +93,7 @@ header .ulMedia {
 
 .ulMedia i {
     font-size: 23px;
-    color: rgb(255, 255, 255);
+    color: rgb(238, 238, 238);
     opacity: 1;
 }
 
@@ -117,7 +120,7 @@ header .ulProjects {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: rgb(50, 205, 50);
+    background-color: rgb(88, 214, 141);
     visibility: hidden;
     transition: all 150ms ease-in-out;
 }
@@ -129,7 +132,7 @@ header .ulProjects {
 }
 
 .ulProjects li a:hover, .ulProjects li a.active {
-    color: rgb(50, 205, 50);
+    color: rgb(88, 214, 141);
     opacity: 1;
 }
 
@@ -141,6 +144,7 @@ header .ulProjects {
 
 .contentArticle .h1AboutMe {
     margin-top: 10%;
+    color: rgb(238, 238, 238);
 }
 
 .contentAbout {
@@ -149,9 +153,10 @@ header .ulProjects {
 }
 
 .cara {
-    width: 100%;
+    width: 70%;
     position: absolute;
     z-index: -100;
+    right: 0;
     bottom: 0;
     display: flex;
     flex-wrap: wrap;
@@ -161,6 +166,8 @@ header .ulProjects {
 .cara img {
     width: 80%;
     position: relative;
+    top: 200px;
+    right: -50px;
 }
 
 .contentArticle p {
@@ -168,6 +175,7 @@ header .ulProjects {
     font-weight: bold;
     line-height: 1.2;
     -webkit-text-stroke: 0.5px rgb(0, 0, 0); /* Borde negro de 0.5px */
+    color: rgb(214, 219, 223);
 }
 
 .pDown, .pDown2 {
@@ -186,6 +194,7 @@ header .ulProjects {
     margin-top: 50px;
     margin-bottom: 50px;
     text-decoration: underline;
+    color: rgb(238, 238, 238);
 }
 
 .sectionExperience {
@@ -195,13 +204,13 @@ header .ulProjects {
     border-radius: 10px;
     transition: all 250ms;
     opacity: 1;
-    background-color: rgb(40, 44, 52); /* Fondo de las secciones */
+    background-color: rgb(42, 54, 63); /* Fondo de las secciones */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Borde */
 }
 
 .sectionExperience:hover {
     box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.1);
-    background-color: rgba(16, 24, 47, 0.7);
+    background-color: rgba(52, 64, 73, 0.7);
 }
 
 .sectionExperience.below {
@@ -247,6 +256,7 @@ header .ulProjects {
     margin: 5px 5px 0 0;
     border: 1px rgba(255, 255, 255, 0.2) solid;
     border-radius: 10px;
+    color: rgb(214, 219, 223);
 }
 
 /* CONTAINER PROJECTS */
@@ -256,10 +266,13 @@ header .ulProjects {
     margin-top: 50px;
     margin-bottom: 50px;
     text-decoration: underline;
+    color: rgb(238, 238, 238);
 }
 
 .containerProjects {
     margin-top: 30px;
+    max-height: 400px; /* Ajusta esta altura según tus necesidades */
+    overflow-y: auto;
 }
 
 .containerProjects h1 {
@@ -273,10 +286,12 @@ header .ulProjects {
 
 .articleWebsite h2 {
     font-size: 25px;
+    color: rgb(238, 238, 238);
 }
 
 .articleWebsite h3 {
     margin-top: 0;
+    color: rgb(189, 195, 199);
 }
 
 .articleWebsite .contentWork {
@@ -284,9 +299,11 @@ header .ulProjects {
     position: relative;
 }
 
-.articleWebsite p{
+.articleWebsite p {
     font-size: 18px;
+    color: rgb(214, 219, 223);
 }
+
 .articleWebsite img {
     width: 100%;
 }
@@ -300,7 +317,6 @@ header .ulProjects {
     top: 0;
     right: 0;
     padding: 10%;
-    
 }
 
 .articleWebsite:hover .contentMouseOver {
@@ -317,8 +333,6 @@ header .ulProjects {
 }
 
 .contentMouseOver li {
-    /* width: 110px;
-    height: 60px; */
     font-size: 18px;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -328,8 +342,7 @@ header .ulProjects {
     align-items: center;
     padding: 10px;
     margin: 5px;
-    border: 2px rgb(226, 230, 239) solid;
-    
+    border: 2px rgb(88, 214, 141) solid;
 }
 
 /* sectionPresent */
@@ -342,16 +355,20 @@ header .ulProjects {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 20px;
-    text-decoration: underline;}
+    text-decoration: underline;
+    color: rgb(238, 238, 238);
+}
 
 .sectionPresent p {
     margin-top: 10px;
+    color: rgb(214, 219, 223);
 }
 
 .sectionPresent h2 {
     text-align: center;
     margin-top: 40px;
     font-size: 25px;
+    color: rgb(238, 238, 238);
 }
 
 /* bottomSection */
@@ -367,13 +384,14 @@ header .ulProjects {
     width: 40%;
     margin: 10px;
     padding: 10px;
-    box-shadow: 0 0 20px 1px rgba(226, 230, 239, 0.5);
+    box-shadow: 0 0 20px 1px rgba(88, 214, 141, 0.5);
     border-radius: 10px;
 }
 
 h4, h5 {
     font-size: 22px;
     text-align: center;
+    color: rgb(238, 238, 238);
 }
 
 .sectionPresent ul {
@@ -381,8 +399,9 @@ h4, h5 {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    color: rgb(50, 205, 50); /* Color de acento verde */
+    color: rgb(88, 214, 141); /* Color de acento verde */
 }
+
 
 .sectionPresent .ulFrameworks {
     height: 85%;
@@ -392,7 +411,7 @@ h4, h5 {
 .sectionPresent li {
     margin: 5px 10px;
     font-size: 20px;
-    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 3px 3px rgba(88, 214, 141, 0.1);
     border-radius: 15px;
     padding: 5px 8px;
 }
@@ -403,6 +422,7 @@ h4, h5 {
 
 .ulPlus li {
     margin-top: 10px;
+    color: rgb(238, 238, 238);
 }
 
 .sectionPresent .lastUl {
@@ -431,4 +451,5 @@ h4, h5 {
 
 .finalText p {
     font-size: 18px;
+    color: rgb(214, 219, 223);
 }

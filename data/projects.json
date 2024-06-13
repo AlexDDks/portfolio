@@ -1,13 +1,5 @@
 [
-    {
-        "id": 1,
-        "title": "As a Programmer",
-        "title_1": "E-commerce Platform",
-        "description": "Developed a complete and responsive e-commerce platform using Node.js. The application features user authentication, item creation, and shopping functionalities.",
-        "tecnologies": ["HTML", "CSS", "JavaScript", "Node.js/Express", "MySQL", "Express", "APIs"],
-        "image": "techyNet.png",
-        "link": ""
-    },
+   
     {
         "id": 2,
         "title": "As an Instructor",

@@ -41,7 +41,7 @@
             <p class="pDown">With extensive training in front-end and back-end programming, I have been an IT instructor for the past year and a half, educating future engineers in computer science.</p>
             <p class="pDown2">Driven by the rapid technological advancements, I aim to contribute to this growth through innovative solutions and continuous learning.</p>
             <div class="cara">
-                <img src="/img/cara.png" alt="">
+                <img src="/img/foto.png" alt="">
             </div>
         </div>
 
@@ -89,35 +89,44 @@
                 </div>
             </section>
         <% } %>
-        <h1 class="h1SectionProjects">Projects</h1>
-        <section class="containerProjects" id="article4">
-            <% for (const website of websites) { %>
-            <article class="articleWebsite">
-                <div class="contentDivWebsite">
-                    <h2 style="padding-bottom: 10px;"><%= website.title %></h2>
-                    <h3 style="padding-bottom: 10px;"><%= website.title_1 %></h3>
-                    <p style="padding-bottom: 10px;"><%= website.description %></p>
-                    <a href="/website/<%= website.id %>">
-                        <div class="contentWork">
-                            <img src="/img/<%= website.image %>" alt="">
-                            <div class="contentMouseOver">
-                                <ul>
-                                    <% for (let i = 0; i < website.tecnologies.length; i++) { %>
-                                    <li><%= website.tecnologies[i] %></li>
-                                    <% } %>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </article>
-            <% } %>
-        </section>
-        <section class="sectionPresent" id="article5">
-<p>"As I near the completion of my PhD in Electronics, I am eager to apply my engineering expertise in web programming and digital systems development. My background has equipped me with strong analytical skills and the ability to tackle complex systems. I aim to develop efficient, scalable, and innovative web solutions, contributing to a dynamic team."
 
-</p>
- <h1>Technologies:</h1>
+
+        <h1 class="h1SectionProjects">Projects</h1>
+<section class="containerProjects" id="article4">
+    <div class="projectsWrapper">
+        <% for (const prog of programer) { %>
+        <article class="articleWebsite">
+            <div class="contentDivWebsite">
+                <h2 style="padding-bottom: 10px;"><%= prog.title %></h2>
+                <h3 style="padding-bottom: 10px;"><%= prog.title_1 %></h3>
+                <p style="padding-bottom: 10px;"><%= prog.description %></p>
+                <a href="/prog/<%= prog.id %>">
+                    <div class="contentWork">
+                        <img src="/img/<%= prog.image %>" alt="">
+                        <div class="contentMouseOver">
+                            <ul>
+                                <% if (Array.isArray(prog.technologies)) { %>
+                                    <% for (let i = 0; i < prog.technologies.length; i++) { %>
+                                        <li><%= prog.technologies[i] %></li>
+                                    <% } %>
+                                <% } else { %>
+                                    <li>No technologies listed</li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </article>
+        <% } %>
+    </div>
+</section>
+
+        
+        <section class="sectionPresent" id="article5">
+            <p>"As I near the completion of my PhD in Electronics, I am eager to apply my engineering expertise in web programming and digital systems development. My background has equipped me with strong analytical skills and the ability to tackle complex systems. I aim to develop efficient, scalable, and innovative web solutions, contributing to a dynamic team."
+            </p>
+            <h1>Technologies:</h1>
             <section class="bottomSection">
                 <div>
                     <h4>Front End</h4>
@@ -169,6 +178,5 @@
         </div>
     </article>
 </main>
-
 </body>
 </html>
