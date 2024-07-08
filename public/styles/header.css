@@ -1,0 +1,39 @@
+header ul {
+    height: 60px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .liName {
+    font-family: zingakon;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: inline-block;
+    transition: color 250ms ease-in-out;
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; 
+    background-color: rgba(220, 220, 220, 0.95); 
+    transition: width 250ms ease-in-out;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+

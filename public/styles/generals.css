@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html{
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+body{
+    width: 650px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 17px;
+    color: rgba(220, 220, 220, 0.95);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+

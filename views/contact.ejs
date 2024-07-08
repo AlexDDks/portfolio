@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/generals.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+
+    <script src="https://kit.fontawesome.com/fa36d49c1a.js" crossorigin="anonymous"></script>
+    <title>Contact | Alejandro Garcia</title>
+</head>
+<body class="fade-up">
+
+<%- include('./partials/header') %>
+
+<section class="contactSection">
+    <h1>Contact Me</h1>
+    <p class="contactIntro">I'm always open to discuss your project, improve your online presence, or help with your programming needs. Feel free to contact me using the form below or through my contact details.</p>
+    
+    <div class="contactContainer">
+        <div class="contactForm">
+            <h2>Contact Form</h2>
+            <form action="/send-message" method="post">
+                <div class="formGroup">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="formGroup">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="formGroup">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submitButton">Send Message
+                    
+                </button>
+            </form>
+        </div>
+
+        <div class="contactDetails">
+            <h2>Contact Details</h2>
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:alejandro.garcia@example.com">alejandro.garcia@example.com</a></li>
+                <li><i class="fa-solid fa-phone"></i> Phone: <a href="tel:+521234567890">+52 123 456 7890</a></li>
+                <li><i class="fa-solid fa-map-marker-alt"></i> Location: Mexico City, Mexico</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<%- include('./partials/footer') %>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const body = document.body;
+        body.classList.add('fade-up', 'show');
+    });
+</script>
+
+</body>
+</html>

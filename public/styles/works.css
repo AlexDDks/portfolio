@@ -1,0 +1,80 @@
+h2{
+    color: rgb(240, 240, 240);
+    margin-top: 20px;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+section article{
+    margin-top: 70px;
+}
+
+
+
+section .work{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work span{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+    color: rgb(187, 13, 187);
+
+}
+
+.info p{
+    font-size: 16px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+.pStack{
+    font-size: 16px;
+    color: rgba(220, 220, 220, 0.6);
+}
+
+hr{
+    color: red;
+}
+
+.h2Collabs{
+    margin-top: 30px;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+section .techStack{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+article .divImg{
+    width: 30%;
+}
+
+.divImg img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow:0 0 15px 5px rgb(60, 60, 60);
+}
+
+article .info{
+    width: 65%;
+}
+
+hr{
+    margin-top: 50px;
+}
+
+

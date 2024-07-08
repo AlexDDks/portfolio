@@ -1,0 +1,104 @@
+.contactSection {
+    width: 100%;
+    margin: 20px auto;
+    color: rgba(220, 220, 220, 0.95);
+}
+
+.contactSection h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contactIntro {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.contactForm, .contactDetails {
+    width: 100%;
+    background-color: rgba(60, 60, 60, 0.95);
+    border-radius: 10px;
+}
+
+.contactForm h2, .contactDetails h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formGroup {
+    width: 80%;
+    margin: auto;
+}
+
+.formGroup label {
+    display: block;
+    margin:20px 0 5px 0;
+    font-weight: bold;
+}
+
+.formGroup input, .formGroup textarea {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(220, 220, 220, 0.3);
+    background-color: rgb(30, 30, 30);
+    color: rgba(220, 220, 220, 0.95);
+    font-size: 16px;
+    text-align: center;
+}
+
+.submitButton {
+    display: block;
+    width: 50%;
+    margin: 30px auto;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(187, 13, 187);
+    color: rgba(220, 220, 220, 0.95);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 250ms;
+}
+
+.submitButton:hover {
+    background-color: rgb(139, 0, 139);
+}
+
+.contactDetails ul {
+    width: 80%;
+    margin: 0 auto 50px auto;
+    list-style: none;
+}
+
+.contactDetails li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contactDetails i {
+    margin-right: 10px;
+    color: rgb(187, 13, 187);
+}
+
+.contactDetails{
+    margin-top: 50px;
+}
+
+h2{
+    margin-top: 30px;
+}
