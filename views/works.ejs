@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/generals.css">
     <link rel="stylesheet" href="/styles/works.css">
-    <link rel="stylesheet" href="/styles/footer.css">
     <script src="https://kit.fontawesome.com/fa36d49c1a.js" crossorigin="anonymous"></script>
+    <script src="/js/fadeUp.js"></script>
 
     <title>Works - Alejandro Garcia</title>
 </head>
-<body>
+<body class="fade-up">
     <%- include('./partials/header') %>
 
     <h2 class="h2Works">Works</h2>
@@ -23,7 +21,7 @@
             <div class="divImg">
                 <img src="/img/Techynet.png" alt="">
             </div>      
-            <div class="info"><p><span>Techynet.</span> An ecommerce platform featuring full CRUD operations. Integrations with Google Maps, authentication and cookies. User-friendly experience with a responsive design.
+            <div class="info"><p><span class="spanTitle">Techynet.</span> An ecommerce platform featuring full <span class="spanWorkPage">CRUD</span> operations. Integrations with Google Maps, authentication and <span class="spanWorkPage">cookies</span>. User-friendly experience with a <span class="spanWorkPage">responsive</span> design.
             </p>
             </div>
         </div>
@@ -38,7 +36,7 @@
         <a href="">
             <article>    
                 <div class="work">
-                    <div class="info"><p><span>Tecmilenio's Manager.</span> A system for managing student enrollments, featuring validations and dynamic scheduling. Ensures efficient student tracking and management.
+                    <div class="info"><p><span class="spanTitle">Tecmilenio's Manager.</span> A system for <span class="spanWorkPage">managing</span> student enrollments, featuring <span class="spanWorkPage">validations</span> and dynamic scheduling. Ensures efficient student tracking and management.
                     </p>
                     </div>
                 <div class="divImg">
@@ -60,7 +58,7 @@
             <div class="divImg">
                 <img src="/img/alejandro.png" alt="">
             </div>      
-            <div class="info"><p><span>Alejandro Garcia.</span>A personal portfolio showcasing skills and projects with a clean, professional design. It offers interactive elements and smooth navigation.
+            <div class="info"><p><span class="spanTitle">Alejandro Garcia.</span> A personal portfolio showcasing skills and projects with a clean, professional <span class="spanWorkPage">design.</span> It offers interactive elements and smooth <span class="spanWorkPage">navigation.</span>
             </p>
             </div>
         </div>
@@ -74,7 +72,7 @@
         <a href="">
         <article>    
             <div class="work">
-                <div class="info"><span>Arin.</span><p>A UX design project for a mobile e-commerce app specializing in art.
+                <div class="info"><span class="spanTitle">Arin.</span> A <span class="spanWorkPage">UX</span> design project for a <span class="spanTitle">mobile</span> e-commerce <span class="spanWorkPage">app</span> specializing in art.
                 </p>
                 </div>
             <div class="divImg">
@@ -84,44 +82,46 @@
         </div>
 
             <h3>Tech Stack:</h3>
-            <p class="pStack">Figma | Photoshop | Scrum | Git | Github |</p>
+            <p class="pStack">Figma | Photoshop | Scrum |</p>
         </article>
         </a>
     </section>
 
-<hr>
+    <hr>
+
     <h2 class="h2Collabs">Collabs</h2>
     <section class="works">
 
             <article>    
                 <div class="work">
                 <div class="divImg">
-                    <img src="/img/Techynet.png" alt="">
+                    <img src="/img/pug.png" alt="">
                 </div>      
-                <div class="info"><p><span>Techynet.</span> An ecommerce platform featuring full CRUD operations. Integrations with Google Maps, authentication and cookies. Ensures a user-friendly experience with a responsive design.
+                <div class="info"><p><span class="spanColabTitle">Un Pug con barba.</span> Responsive textile <span class="spanCollabPage">e-commerce</span> with form <span class="spanCollabPage">validations.</span>
                 </p>
+                <p class="pProgrammer">Main Programmer: Crhistian Hernandez</p>
                 </div>
             </div>
     
                 <h3>Tech Stack:</h3>
-                <p class="pStack">HTML | EJS | CSS | JavaScript | Node.js | Express | MySQL | MVC architecture | Scrum | Git | Github |</p>
+                <p class="pStack">HTML | CSS | JavaScript | MySQL | Figma |</p>
                
             </article>
     
     
                 <article>    
-                    <div class="work">
-                        <div class="info"><p><span>Tecmilenios Manager.</span> A system for managing student enrollments, featuring validations and dynamic scheduling. Ensures efficient student tracking and management. Fully responsive.
-                        </p>
-                        </div>
+                    <div class="work">    
+                    <div class="info"><p><span class="spanColabTitle">Pokedex.</span> An <span class="spanCollabPage">interactive</span> Pokedex with a <span class="spanCollabPage">responsive</span> interface.
+                    </p>
+                    <p class="pProgrammer">Main Programmer: Nayeli Montes</p>
+                    </div>
                     <div class="divImg">
-                        <img src="/img/tecmilenio.png" alt="">
-                    </div>      
-                    
+                        <img src="/img/pokedex.png" alt="">
+                    </div>  
                 </div>
         
                     <h3>Tech Stack:</h3>
-                    <p class="pStack">HTML | CSS | JavaScript | Blade | PHP | Laravel | MySQL | MVC architecture | Scrum | Git | Github |</p>
+                    <p class="pStack">HTML | CSS | JavaScript | Vue.js | Bootstrap | MySQL | Mockups: Creately |</p>
     
                 </article>
     
@@ -129,32 +129,35 @@
             <article>    
                 <div class="work">
                 <div class="divImg">
-                    <img src="/img/alejandro.png" alt="">
+                    <img src="/img/moon.png" alt="">
                 </div>      
-                <div class="info"><p><span>Alejandro Garcia.</span>A personal portfolio showcasing skills and projects with a clean, professional design. It offers interactive elements and smooth navigation.
+                <div class="info"><p><span class="spanColabTitle">Moon Thief.</span> A clothing store with strong <span class="spanCollabPage">backend</span> development, validations, and <span class="spanCollabPage">responsive</span> design.
                 </p>
+                <p class="pProgrammer">Main Programmer: Luz Herrera</p>
+
                 </div>
             </div>
     
                 <h3>Tech Stack:</h3>
-              <p class="pStack">HTML | EJS | CSS | JavaScript | Node.js | Express | MySQL | MVC architecture |</p>
+              <p class="pStack">HTML | CSS | JavaScript | PHP | MySQL |</p>
             </article>
     
     
-            <article>    
-                <div class="work">
-                    <div class="info"><span>Arin.</span><p>A UX design project for a mobile e-commerce app specializing in art.
+
+            <article>                  
+               <div class="work">    
+                    <div class="info"><p><span class="spanColabTitle">Alma Playa.</span> A web and mobile  <span class="spanCollabPage">application</span> for managing dishes and the restaurant menu.
                     </p>
+                    <p class="pProgrammer">Main Programmer: Diego Jara</p>
                     </div>
-                <div class="divImg">
-                    <img src="/img/arin.png" alt="">
-                </div>      
-                
-            </div>
+                    <div class="divImg">
+                        <img src="/img/alma.png" alt="">
+                    </div>  
+                </div>
     
                 <h3>Tech Stack:</h3>
-                <p class="pStack">Figma | Photoshop | Scrum | Git | Github |</p>
-            </article>
+                <p class="pStack">HTML | CSS | JavaScript | PHP | MySQL | Photoshop | Figma |</p>
+                        </article>
     </section>
 
 

@@ -1,13 +1,107 @@
+/* GENERALS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html{
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+body{
+    width: 650px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 17px;
+    color: rgba(220, 220, 220, 0.95);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* GENERALS ENDS */
+
+
+/* HEADER */
+header ul {
+    height: 60px;
+    width: 100%;
+    margin: 10px 0 0 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .liName {
+    font-family: zingakon;
+    
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: inline-block;
+    transition: color 250ms ease-in-out;
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; 
+    background-color: rgba(220, 220, 220, 0.95); 
+    transition: width 250ms ease-in-out;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+/* HEADER ENDS */
+
+
 .topItem{
     width: 120%;
-    height: 250px;
-    margin: 50px -10% 0 -10% ;
-    background-color: rgba(220, 220, 220, 0.95);
+    height: 270px;
+    margin: 30px -10% 0 -10% ;
+}
+
+.topItem video{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 1px rgb(60, 60, 60);
 }
 
 .sectionTopItem{
     position: relative;
 }
+
 
 figure{
     width: 140px;
@@ -18,9 +112,10 @@ figure{
     position: absolute;
     top: 160px;
     left: -70px;
+    z-index: 101;
 }
 
-img{
+figure img{
     width: 100%;
     border-radius: 70px;
 }
@@ -38,8 +133,10 @@ img{
     width: 60%;
     font-family: zingakon;
     color: rgb(240, 240, 240);
-    font-size: 36px;   
-  
+    font-size: 36px; 
+    /* color:rgb(135, 206, 235);  */
+  /* color: rgb(98, 201, 100);
+  color: rgb(255, 223, 0); */
 }
 
 .lowerItem ul{
@@ -48,15 +145,20 @@ img{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+    font-weight: bold;
 }
 
 .pPresentation{
-    width: 60%;
+    width: 65%;
     margin: 50px auto 0 auto;
     text-align: center;
     padding: 15px 10px;
     border-radius: 10px;
-    background-color:  rgb(60, 60, 60);
+    /* background-color:  rgb(60, 60, 60); */
+    background-color:rgb(135, 206, 235);  
+    color: rgb(30, 30, 30);
+    font-weight: 600;
+
 }
 
 section{
@@ -69,6 +171,10 @@ h2{
     margin: 50px 0 20px 0;
     font-size: 26px;
     text-decoration: underline;
+}
+
+section .spanAbout{
+    color:rgb(135, 206, 235);  
 }
 
 .portafolioItem{
@@ -96,9 +202,43 @@ table .tdYear.last{
     text-align: start;
  }
  
+.spanBio{
+    color: rgb(187, 13, 187);
+}
 
 .fa-heart{
     color: rgb(187, 13, 187);
     font-size: 26px;
 }
 
+
+/* FOOTER */
+footer ul{
+    width: 40%;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer i{
+    font-size: 19px;
+    padding: 7px;
+    border-radius: 3.5px;
+    transition: all 250ms;
+}
+
+footer i:hover{
+    background-color: rgb(60, 60, 60);
+}
+
+.copyrigthItem{
+    width: 40%;
+    margin: 20px auto 40px auto;
+    text-align: center;
+}
+
+.copyrigthItem p{
+    font-size: 14px;
+    color: rgba(220, 220, 220, 0.6);
+}
+/* FOOTER ENDS */

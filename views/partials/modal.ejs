@@ -1,0 +1,52 @@
+<div id="confirmationModal" class="modal">
+    <div class="modalContent">
+        <p id="modalMessage">Message sent successfully!</p>
+        <button id="closeModalButton">OK</button>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById('contactForm');
+        const modal = document.getElementById('confirmationModal');
+        const closeButton = document.getElementById('closeModalButton');
+        const modalMessage = document.getElementById('modalMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message')
+            };
+
+            fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    modalMessage.textContent = data.message;
+                    modal.style.display = 'flex';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                modalMessage.textContent = 'An error occurred. Please try again later.';
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeButton.onclick = function() {
+            modal.style.display = 'none';
+            window.location.href = '/contact';
+        };
+    });
+</script>

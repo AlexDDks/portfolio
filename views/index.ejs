@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/generals.css">
     <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/fadeUp.js"></script>
 
     <script src="https://kit.fontawesome.com/fa36d49c1a.js" crossorigin="anonymous"></script>
     <title>Alejandro Garcia</title>
@@ -17,9 +17,9 @@
 
 
   <section class="sectionTopItem">
-    <article class="topItem">
-      Este será el item inferior
-    </article>
+<article class="topItem">
+  <video id="videoBanner"  src="/videos/videoBanner.mp4" autoplay loop muted></video>
+</article>
 
     <figure>
       <img src="/img/foto.png" alt="foto">
@@ -31,13 +31,14 @@
       Alejandro Garcia
     </h1>
 
-    <ul>
+    <ul class="professionsList">
       <li>Full Stack Developer</li>
       <li>Engineer</li>
       <li>Researcher</li>
       <li>UX Developer</li>
       <li>Artist</li>
     </ul>
+
   </article>
 
   <p class="pPresentation">Hello, I'm a full stack developer based in Mexico!</p>
@@ -45,12 +46,15 @@
   <section>
    
   <h2>About me</h2>
-  <p>Alejandro is a freelance and full-stack developer based in Mexico City with a passion for programming and learning as technology evolves. He excels in teaching and enjoys sharing knowledge to help others understand technology. As a new freelancer, he is eager and open to opportunities to grow professionally. When not coding, he finds inspiration in art and creative expressions. Alejandro's dedication to both technology and art makes him a versatile professional.
+
+  <p>
+    Alejandro is a seasoned freelance and full-stack developer based in Mexico City, passionate about <span class="spanAbout">programming</span> and continuous <span class="spanAbout">learning.</span> He excels in <span class="spanAbout">teaching</span> and enjoys helping others understand complex technological concepts. Alejandro is eager to collaborate with forward-thinking companies on <span class="spanAbout">challenging</span> projects that drive innovation. His dedication to technology enables him to approach problems creatively and deliver effective <span class="spanAbout">solutions</span>.
+
   </p>
 
-  <article class="portafolioItem">
+  <a href="/works"><article class="portafolioItem">
     <p>My portfolio <i class="fa-solid fa-arrow-right"></i></p>
-  </article>
+  </article></a>
 
   <h2>Bio</h2>
   <table>
@@ -58,17 +62,20 @@
         <td class="tdYear">1992</td>
         <td>Born in Yajalon, Mexico.</td>
     </tr>
+
+    <tr>
+      <td class="tdYear">2023</td>
+      <td>Started teaching <span class="spanBio">full stack development</span> at Tecmilenio University.</td>
+    </tr>
+
     <tr>
         <td class="tdYear">2024</td>
-        <td>Completed the Ph.D. Program in Electronics Engineering at National Polytechnic Institute, Mexico City</td>
+        <td>Completed the  <span class="spanBio">Ph.D.</span> Program in Electronics Engineering at National Polytechnic Institute, Mexico City</td>
     </tr>
-    <tr>
-        <td class="tdYear">2023</td>
-        <td>Started teaching full stack development at Tecmilenio University.</td>
-    </tr>
+    
     <tr>
         <td class="tdYear last">2024 to present</td>
-        <td>Currently working as a freelancer and open to new challenges and opportunities.</td>
+        <td>Currently growing as an Instructor and freelancer and open to new <span class="spanBio">challenges.</span></td>
     </tr>
 </table>
 
@@ -78,13 +85,6 @@
   
 
 <%- include('./partials/footer') %>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-      const body = document.body;
-      body.classList.add('fade-up', 'show');
-  });
-</script>
 
 </body>
 </html>

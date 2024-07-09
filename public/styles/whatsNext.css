@@ -1,0 +1,208 @@
+/* GENERALS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html{
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+body{
+    width: 650px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 17px;
+    color: rgba(220, 220, 220, 0.95);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* GENERALS ENDS */
+
+
+/* HEADER */
+header ul {
+    height: 60px;
+    width: 100%;
+    margin: 10px 0 0 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .liName {
+    font-family: zingakon;
+    
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: inline-block;
+    transition: color 250ms ease-in-out;
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; 
+    background-color: rgba(220, 220, 220, 0.95); 
+    transition: width 250ms ease-in-out;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+/* HEADER ENDS */
+
+
+
+h2 {
+    color: rgb(240, 240, 240);
+    text-align: center;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+section {
+    margin: 40px auto;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.intro p, .technologies p, .skills p, .courses p, .studying p, .extra p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgba(220, 220, 220, 0.95);
+}
+
+.techList{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.techList li{
+    padding: 10px;
+    color:rgb(135, 206, 235);
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: 600;
+}
+
+ .courseList li, .studyList li, .futureProjects li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: rgba(220, 220, 220, 0.95);
+}
+
+.liInf{
+    color:rgb(187, 13, 187);
+}
+
+.extra li{
+    color:rgb(187, 13, 187);
+
+}
+
+.skillContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    width: 45%;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(220, 220, 220, 0.1);
+    border-radius: 5px;
+}
+
+.skill h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+    color:rgb(135, 206, 235);;
+}
+
+.skill p {
+    font-size: 14px;
+}
+
+hr {
+   
+width: 100%;
+    border: none;
+    height: 1px;
+    background-color:rgb(135, 206, 235);;
+    margin: 30px auto;
+}
+
+.hrBottom {
+        background-color:rgb(187, 13, 187)        ;
+}
+    
+
+
+/* FOOTER */
+footer ul{
+    width: 40%;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer i{
+    font-size: 19px;
+    padding: 7px;
+    border-radius: 3.5px;
+    transition: all 250ms;
+}
+
+footer i:hover{
+    background-color: rgb(60, 60, 60);
+}
+
+.copyrigthItem{
+    width: 40%;
+    margin: 20px auto 40px auto;
+    text-align: center;
+}
+
+.copyrigthItem p{
+    font-size: 14px;
+    color: rgba(220, 220, 220, 0.6);
+}
+/* FOOTER ENDS */

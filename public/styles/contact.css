@@ -1,3 +1,90 @@
+/* GENERALS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html{
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+body{
+    width: 650px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 17px;
+    color: rgba(220, 220, 220, 0.95);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1s ease-out;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* GENERALS ENDS */
+
+
+/* HEADER */
+header ul {
+    height: 60px;
+    width: 100%;
+    margin: 10px 0 0 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .liName {
+    font-family: zingakon;
+    
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: inline-block;
+    transition: color 250ms ease-in-out;
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; 
+    background-color: rgba(220, 220, 220, 0.95); 
+    transition: width 250ms ease-in-out;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+/* HEADER ENDS */
+
 .contactSection {
     width: 100%;
     margin: 20px auto;
@@ -17,6 +104,11 @@
     font-size: 16px;
     margin-bottom: 40px;
 }
+
+.contactIntro .spanSup{
+    color:rgb(135, 206, 235);
+}
+
 
 .contactContainer {
     display: flex;
@@ -39,6 +131,10 @@
     text-align: center;
 }
 
+.contactDetails .spanInf{
+    color: rgb(187, 13, 187);
+}
+
 .formGroup {
     width: 80%;
     margin: auto;
@@ -58,12 +154,11 @@
     background-color: rgb(30, 30, 30);
     color: rgba(220, 220, 220, 0.95);
     font-size: 16px;
-    text-align: center;
 }
 
 .submitButton {
     display: block;
-    width: 50%;
+    width: 30%;
     margin: 30px auto;
     padding: 15px;
     border: none;
@@ -101,4 +196,79 @@
 
 h2{
     margin-top: 30px;
+}
+
+
+/* FOOTER */
+footer ul{
+    width: 40%;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer i{
+    font-size: 19px;
+    padding: 7px;
+    border-radius: 3.5px;
+    transition: all 250ms;
+}
+
+footer i:hover{
+    background-color: rgb(60, 60, 60);
+}
+
+.copyrigthItem{
+    width: 40%;
+    margin: 20px auto 40px auto;
+    text-align: center;
+}
+
+.copyrigthItem p{
+    font-size: 14px;
+    color: rgba(220, 220, 220, 0.6);
+}
+/* FOOTER ENDS */
+
+/* MODAL */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Queda fijo en la pantalla */
+    z-index: 1; /* Se coloca delante de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: rgba(220, 220, 220, 0.95);
+    padding: 20px;
+    width: 50%; /* Ajusta el tamaño al 100% */
+    max-width: 600px; /* Ancho máximo */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(30, 30, 30);
+}
+
+#closeModalButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(187, 13, 187);
+    color: rgba(220, 220, 220, 0.95);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#closeModalButton:hover {
+    background-color: rgb(139, 0, 139);
 }
