@@ -1,26 +1,26 @@
 /* GENERALS */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
 
-html{
+html {
     background-color: rgb(30, 30, 30);
     width: 100%;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     color: rgb(240, 240, 240);
     text-decoration: none;
 }
 
-body{
+body {
     width: 650px;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +28,7 @@ body{
     line-height: 1.5;
     font-size: 17px;
     color: rgba(220, 220, 220, 0.95);
+    transition: background-color 0.3s, color 0.3s; /* Transición para cambio de tema */
 }
 
 .fade-up {
@@ -46,8 +47,8 @@ body{
 /* HEADER */
 header ul {
     height: 60px;
-    width: 100%;
-    margin: 10px 0 0 0 ;
+    width: 120%;
+    margin: 10px -10% 0 -10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +56,6 @@ header ul {
 
 header .liName {
     font-family: zingakon;
-    
 }
 
 header ul li {
@@ -75,8 +75,8 @@ header ul li a::after {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px; 
-    background-color: rgba(220, 220, 220, 0.95); 
+    height: 2px;
+    background-color: rgba(220, 220, 220, 0.95);
     transition: width 250ms ease-in-out;
 }
 
@@ -84,7 +84,6 @@ header ul li a:hover::after {
     width: 100%;
 }
 /* HEADER ENDS */
-
 
 
 h2 {
@@ -206,3 +205,73 @@ footer i:hover{
     color: rgba(220, 220, 220, 0.6);
 }
 /* FOOTER ENDS */
+
+/* LIGHT MODE */
+html.light-mode {
+    background-color: rgb(240, 240, 240);
+    color: rgb(60, 60, 60);
+}
+
+html.light-mode header ul li a::after{
+    background-color: rgb(30, 30, 30);;
+}
+
+html.light-mode a, 
+html.light-mode h1, 
+html.light-mode h2 {
+    color: rgb(30, 30, 30);
+}
+
+html.light-mode p,
+html.light-mode li,
+html.light-mode td {
+    color: rgb(60, 60, 60); /* Color de los párrafos, li y td en modo claro */
+}
+
+html.light-mode .intro p, 
+html.light-mode .technologies p, 
+html.light-mode .skills p, 
+html.light-mode .courses p, 
+html.light-mode .studying p, 
+html.light-mode .extra p {
+    color: rgb(60, 60, 60);
+}
+
+html.light-mode .techList li {
+    color: rgb(9, 169, 233);
+}
+
+html.light-mode .courseList li, 
+html.light-mode .studyList li, 
+html.light-mode .futureProjects li {
+    color: rgb(60, 60, 60);
+}
+
+html.light-mode .liInf {
+    color: rgb(187, 13, 187);
+}
+
+html.light-mode .extra li {
+    color: rgb(187, 13, 187);
+}
+
+html.light-mode .skill {
+    background-color: rgb(220, 220, 220);
+}
+
+html.light-mode .skill h3 {
+    color: rgb(9, 169, 233);
+}
+
+html.light-mode hr {
+    background-color: rgb(9, 169, 233);
+}
+
+html.light-mode .hrBottom {
+    background-color: rgb(187, 13, 187);
+}
+
+html.light-mode footer i:hover {
+    background-color: rgb(220, 220, 220);
+}
+/* LIGHT MODE ENDS */

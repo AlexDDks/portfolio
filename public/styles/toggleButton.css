@@ -1,0 +1,38 @@
+/* TOGGLE BUTTON */
+.toggleDarkMode {
+    background: rgb(30, 30, 30); /* Fondo del botón */
+    border: none;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;  /* Ajustar ancho para mantener la forma circular */
+    height: 30px; /* Ajustar altura para mantener la forma circular */
+    transition: all 250ms;
+}
+
+.toggleDarkMode:hover {
+    background: rgb(60, 60, 60); /* Fondo del botón al pasar el cursor */
+}
+
+html.light-mode .toggleDarkMode {
+    background: rgba(60, 60, 60, 0.15); /* Fondo del botón en modo claro */
+}
+
+html.light-mode .toggleDarkMode i{
+    color: rgb(30, 30, 30);
+}
+
+html.light-mode .toggleDarkMode:hover {
+    background: rgba(60, 60, 60, 0.3); /* Fondo del botón al pasar el cursor en modo claro */
+}
+
+/* Estilos del icono dentro del botón */
+.toggleDarkMode i {
+    margin-top: 2px;
+    font-size: 24px;
+    color: rgb(240, 240, 240);
+}

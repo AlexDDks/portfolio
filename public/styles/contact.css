@@ -1,26 +1,26 @@
 /* GENERALS */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
 
-html{
+html {
     background-color: rgb(30, 30, 30);
     width: 100%;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     color: rgb(240, 240, 240);
     text-decoration: none;
 }
 
-body{
+body {
     width: 650px;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
@@ -28,6 +28,7 @@ body{
     line-height: 1.5;
     font-size: 17px;
     color: rgba(220, 220, 220, 0.95);
+    transition: background-color 0.3s, color 0.3s; /* Transición para cambio de tema */
 }
 
 .fade-up {
@@ -46,8 +47,8 @@ body{
 /* HEADER */
 header ul {
     height: 60px;
-    width: 100%;
-    margin: 10px 0 0 0 ;
+    width: 120%;
+    margin: 10px -10% 0 -10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +56,6 @@ header ul {
 
 header .liName {
     font-family: zingakon;
-    
 }
 
 header ul li {
@@ -75,14 +75,15 @@ header ul li a::after {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px; 
-    background-color: rgba(220, 220, 220, 0.95); 
+    height: 2px;
+    background-color: rgba(220, 220, 220, 0.95);
     transition: width 250ms ease-in-out;
 }
 
 header ul li a:hover::after {
     width: 100%;
 }
+
 /* HEADER ENDS */
 
 .contactSection {
@@ -272,3 +273,90 @@ footer i:hover{
 #closeModalButton:hover {
     background-color: rgb(139, 0, 139);
 }
+
+
+/* LIGHT MODE */
+html.light-mode {
+    background-color: rgb(240, 240, 240);
+    color: rgb(60, 60, 60);
+}
+
+html.light-mode header ul li a::after{
+    background-color: rgb(30, 30, 30);;
+}
+
+html.light-mode a, 
+html.light-mode h1, 
+html.light-mode h2 {
+    color: rgb(30, 30, 30);
+}
+
+html.light-mode p,
+html.light-mode li,
+html.light-mode td {
+    color: rgb(60, 60, 60); /* Color de los párrafos, li y td en modo claro */
+}
+
+html.light-mode .contactSection {
+    color: rgb(60, 60, 60);
+}
+
+html.light-mode .contactSection h1,
+html.light-mode .contactSection h2 {
+    color: rgb(30, 30, 30);
+}
+
+html.light-mode .contactIntro .spanSup {
+    color: rgb(9, 169, 233);
+}
+
+html.light-mode .contactForm, 
+html.light-mode .contactDetails {
+    background-color: rgb(220, 220, 220);
+    color: rgb(30, 30, 30);
+    border-radius: 10px;
+}
+
+html.light-mode .contactDetails .spanInf {
+    color: rgb(187, 13, 187);
+}
+
+html.light-mode .formGroup input, 
+html.light-mode .formGroup textarea {
+    background-color: rgb(240, 240, 240);
+    color: rgb(30, 30, 30);
+    border: 1px solid rgb(220, 220, 220);
+}
+
+html.light-mode .submitButton {
+    background-color: rgb(187, 13, 187);
+    color: rgb(240, 240, 240);
+}
+
+html.light-mode .submitButton:hover {
+    background-color: rgb(139, 0, 139);
+}
+
+html.light-mode .contactDetails i {
+    color: rgb(187, 13, 187);
+}
+
+html.light-mode footer i:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+html.light-mode .modalContent {
+    background-color: rgb(220, 220, 220);
+    color: rgb(30, 30, 30);
+}
+
+html.light-mode #closeModalButton {
+    background-color: rgb(187, 13, 187);
+    color: rgb(240, 240, 240);
+}
+
+html.light-mode #closeModalButton:hover {
+    background-color: rgb(139, 0, 139);
+}
+
+/* LIGHT MODE ENDS */

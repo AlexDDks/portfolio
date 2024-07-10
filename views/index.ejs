@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/toggleButton.css">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="/js/fadeUp.js"></script>
-
     <script src="https://kit.fontawesome.com/fa36d49c1a.js" crossorigin="anonymous"></script>
+    <script src="/js/fadeUp.js" defer></script>
+    <script src="/js/themeToggle.js" defer></script>
     <title>Alejandro Garcia</title>
 </head>
 <body class="fade-up">
-
   <%- include('./partials/header') %>
 
-
   <section class="sectionTopItem">
-<article class="topItem">
-  <video id="videoBanner"  src="/videos/videoBanner.mp4" autoplay loop muted></video>
-</article>
+    <article class="topItem">
+        <video id="videoBanner"  src="/videos/videoBanner.mp4" autoplay loop muted></video>
+    </article>
 
     <figure>
       <img src="/img/foto.png" alt="foto">
@@ -40,16 +40,13 @@
     </ul>
 
   </article>
-
   <p class="pPresentation">Hello, I'm a full stack developer based in Mexico!</p>
-
   <section>
    
   <h2>About me</h2>
 
   <p>
     Alejandro is a seasoned freelance and full-stack developer based in Mexico City, passionate about <span class="spanAbout">programming</span> and continuous <span class="spanAbout">learning.</span> He excels in <span class="spanAbout">teaching</span> and enjoys helping others understand complex technological concepts. Alejandro is eager to collaborate with forward-thinking companies on <span class="spanAbout">challenging</span> projects that drive innovation. His dedication to technology enables him to approach problems creatively and deliver effective <span class="spanAbout">solutions</span>.
-
   </p>
 
   <a href="/works"><article class="portafolioItem">
@@ -85,6 +82,7 @@
   
 
 <%- include('./partials/footer') %>
+    
 
 </body>
 </html>
